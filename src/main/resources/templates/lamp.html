@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>주보 제작툴</title>
+</head>
+<body>
+    <h1>남포교회 청년예배 주보 제작 툴입니다.</h1>
+    <hr>
+    <h3>성경 구절 찾기</h3>
+    <form method="post">
+        <select name="testament">
+            <option value="구">구약</option>
+            <option value="신">신약</option>
+        </select>
+        <input type="text" name="long_label">찾고싶은 성경전서
+        <input type="text" name="chapter">장
+        <input type="text" name="paragraph">절
+        <button type="submit">가져오기</button>
+    </form>
+    <div th:if="${bible != null}">
+        <h2>Sentence:</h2>
+        <p th:text="${bible.sentence}"></p>
+    </div>
+</body>
+</html>
