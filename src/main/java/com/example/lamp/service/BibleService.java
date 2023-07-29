@@ -2,6 +2,8 @@ package com.example.lamp.service;
 
 import com.example.lamp.domain.Bible;
 
+import java.util.List;
+
 public interface BibleService {
-    Bible searchByParagraph(String testament, String long_label, int chapter, int paragraph);
+    List<Bible> searchByRange(String testament, String long_label, int chapter, int first, int last);
 }

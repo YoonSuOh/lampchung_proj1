@@ -4,5 +4,6 @@
 <configuration>
     <mappers>
         <mapper resource="BibleMapper.xml"/>
+        <mapper resource="CcmMapper.xml"/>
     </mappers>
 </configuration>

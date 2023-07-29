@@ -8,23 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 @Controller
 public class MainController {
-    private final BibleService bibleService;
-
-    public MainController(BibleService bibleService) {
-        this.bibleService = bibleService;
-    }
 
     @GetMapping("/")
     public String lamp(Model model){
         return "/lamp";
     }
 
-    @PostMapping ("/")
-    public String paragraph(@RequestParam String testament, @RequestParam String long_label, @RequestParam int chapter, @RequestParam int paragraph, Model model) throws Exception{
-        Bible bible = bibleService.searchByParagraph(testament, long_label, chapter, paragraph);
-        model.addAttribute("bible", bible);
-        return "/lamp";
+    @GetMapping("/paper")
+    public String paper(Model model){
+        return "/paper";
     }
 }
