@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>PDF 테스트</title>
 </head>
 <body>
-
+    <!-- 머리말 -->
+    <section>
+        <h2 th:text="${paper.title} + ' 청년예배 주보'"></h2>
+        <p th:text="' 인도- ' + ${paper.guidename} + ' 목사'"></p>
+    </section>
+    <!-- 머리말 -->
+    <hr>
+    <!-- 주보 본문 -->
+    <section>
+        <h2>예배로의 부름 - 인도자</h2>
+        <h2>송영-찬송가 1장</h2>
+        <p>만복의 근원 하나님 온 백성 찬송 드리고<br>
+            저 천사여 찬송하세 찬송 성부 성자 성령 아멘</p>
+        <h2>교독-[[${paper.respname}]]</h2>
+        <h2>신앙고백-사도신경</h2>
+        <p>나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+            나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+            그는 성령으로 잉태되어 동정녀 마리아에게서 나시고, <br>
+            본디오 빌라도 치하에서 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+            장사된 지 사흘 만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+            하늘에 오르셔서 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+            거기로부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+            나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+            죄를 용서받는 것과 몸의 부활과 영생을 믿습니다.<br>
+            아멘.
+        </p>
+        <h2>찬양-찬양팀</h2>
+        <p>[[${paper.ccm}]]</p>
+        <h2>기도-[[${paper.prayname}]]</h2>
+        <h2>성경봉독</h2>
+        <p>[[${paper.sentence}]]</p>
+        <h2>헌금-[[${paper.offername}]]</h2>
+        <h2>연합 광고</h2>
+        <p th:utext="${paper.notice.replace('다.', '다.<br/>')}"></p>
+        <h2>부서 광고</h2>
+        <h3>청년 1부</h3>
+        <p th:utext="${paper.notice1.replace('다.', '다.<br/>')}"></p>
+        <h3>청년 2부</h3>
+        <p th:utext="${paper.notice2.replace('다.', '다.<br/>')}"></p>
+        <h3>청년 3부</h3>
+        <p th:utext="${paper.notice3.replace('다.', '다.<br/>')}"></p>
+        <h2 th:text="' 설교- ' + ${paper.speachname} + ' 목사'"></h2>
+        <h2>송영-찬송가 5장</h2>
+        <p>이 천지간 만물들아 복 주시는 주 여호와<br>
+            전능 성부 성자 성령 찬송하고 찬송하세 아멘.
+        </p>
+    </section>
+    <!-- 주보 본문 -->
+    <hr>
+    <!-- 다음주 예배 -->
+    <section>
+        <p>기도-[[${paper.nprayname}]]</p>
+        <p>교독-[[${paper.nrespname}]]</p>
+        <p>헌금-[[${paper.noffername}]]</p>
+    </section>
+    <!-- 다음주 예배 -->
 </body>
 </html>

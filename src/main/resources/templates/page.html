@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>주보 목록</title>
+</head>
+<body>
+<main>
+    <div id="doc">
+        <hr>
+        <div class="doc_inner">
+            <span class="title">주보 목록</span>
+            <ul>
+                <div id="category" th:each="list : ${page}">
+                    <li><a th:href="@{/paper(idx=${list.idx})}">[[${list.title}]] 청년예배 주보</a></li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</main>
+</body>
+</html>

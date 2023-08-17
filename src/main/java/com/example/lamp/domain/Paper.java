@@ -13,10 +13,21 @@ import java.util.Date;
 @NoArgsConstructor
 public class Paper {
     int idx;
-    int prev_idx;
-    Date date;
-    String pdf;
-    String npray;
-    String nresoponsive;
-    String noffering;
+    String title;
+    String guidename;
+    String prayname;
+    String respname;
+    String offername;
+    String ccm;
+    String todaybible;
+    String paragraph;
+    String sentence;
+    String notice;
+    String notice1;
+    String notice2;
+    String notice3;
+    String speachname;
+    String nprayname;
+    String nrespname;
+    String noffername;
 }
