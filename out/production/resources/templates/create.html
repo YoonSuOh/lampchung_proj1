@@ -32,13 +32,14 @@
                     <header class="main">
                         <div class="row">
                             <div class="row">
-                                <h2>주보 일자 : </h2>
+
+                                <h2>날짜: </h2>
                                 <div class="col-12-xsmall">
                                     <input type="text" name="title" id="title" value="" placeholder="Name" />
                                 </div>
                             </div>
                             <div class="row">
-                                <h2>인도: </h2>
+                                <h2> 인도: </h2>
                                 <div class="col-12-xsmall">
                                     <input type="text" name="guidename" id="GuideName" value="" placeholder="Name" />
                                 </div>
@@ -49,12 +50,14 @@
                                 <div class="col-12-xsmall">
                                     <input type="text" name="prayname" id="PrayName" value="" placeholder="Name" />
                                 </div>
-
+                            </div>
+                            <div class="row">
                                 <h2>교독: </h2>
                                 <div class="col-12-xsmall">
                                     <input type="text" name="respname" id="RespName" value="" placeholder="Name" />
                                 </div>
-
+                            </div>
+                            <div class="row">
                                 <h2>헌금: </h2>
                                 <div class="col-12-xsmall">
                                     <input type="text" name="offername" id="OfferName" value="" placeholder="Name" />
@@ -120,16 +123,28 @@
 
                     <hr class="Read" />
                     <div class="row">
-                        <h2>성경 봉독-</h2>
+                        <h2>성경 봉독 - </h2>
+                        <div class="col-12-xsmall">
                             <select name="testament">
                                 <option value="구">구약</option>
                                 <option value="신">신약</option>
                             </select>
+                        </div>
+                        <div class="col-12-xsmall">
                             <input type="text" name="long_label">찾고싶은 성경전서
+                        </div>
+                        <div class="col-12-xsmall">
                             <input type="text" name="chapter">장
+                        </div>
+                        <div class="col-12-xsmall">
                             <input type="text" name="first">시작하는 절
+                        </div>
+                        <div class="col-12-xsmall">
                             <input type="text" name="last">끝나는 절
+                        </div>
+                        <div class="col-12-xsmall">
                             <button type="submit" formmethod="post" onclick="javascript: form.action='/bible';">가져오기</button>
+                        </div>
                         <div th:if="${list != null}">
                             <div th:each="list : ${list}">
                                 <input type="text" th:name="todaybible">
@@ -138,7 +153,9 @@
                                 <p>[[${list.paragraph}]] [[${list.sentence}]]</p>
                             </div>
                         </div>
-                        <hr class="Offering" />
+                    </div>
+
+                    <hr class="Offering" />
                         <br>
                         <h2>헌금</h2>
 
@@ -161,7 +178,12 @@
                         <!--여기까지-->
 
                         <hr class="Sermon" />
-                        <h2>설교 - <input type="text" th:name="speachname" ></h2>
+                        <div class="row">
+                            <h2>설교 - </h2>
+                            <div class="col-12-xsmall">
+                                <input type="text" th:name="speachname" />
+                            </div>
+                        </div>
                         <!--<div class="row">
                             <h3>주제: </h3>
                             <div class="col-6">
