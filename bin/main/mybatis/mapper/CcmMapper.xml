@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lamp.dao.CcmDao">
+
+    <!-- 이미지 삽입 -->
+    <insert id="insertImage" keyProperty="idx">
+        INSERT INTO ccm VALUES (#{idx}, #{image})
+    </insert>
+
+    <!-- 업로드 된 악보 불러오기 -->
+    <select id="searchImage" resultType="com.example.lamp.domain.Ccm">
+        SELECT idx, CONVERT(image USING UTF8) FROM ccm;
+    </select>
+</mapper>

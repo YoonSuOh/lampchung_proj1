@@ -22,26 +22,27 @@
         <div class="inner">
             <!-- Header -->
             <header id="header">
-                <div class="col-1">
                 <a th:href="@{/create}" class="logo">
                     <h1 th:text="${paper.title} + ' 청년예배 주보'"></h1>
+                    <h3 th:text="' 인도- ' + ${paper.guidename} + ' 목사'"></h3>
                 </a>
-
-                </div>
             </header>
             <form enctype="multipart/form-data">
                 <!-- Content -->
                 <section>
-                    <hr class="main"/>
-                    <div class="col-1">
-                    <h2 th:text="'인도- ' + ${paper.guidename} + ' 목사'"></h2>
+                    <header class="main">
                         <div class="row">
-                            <h3>기도-[[${paper.prayname}]]</h3>
-                            <h3>교독-[[${paper.respname}]]</h3>
-                            <h3>헌금-[[${paper.offername}]]</h3>
+                            <div class="row">
+                                <h2>기도-[[${paper.prayname}]]</h2>
+                            </div>
+                            <div class="row">
+                                <h2>교독-[[${paper.respname}]]</h2>
+                            </div>
+                            <div class="row">
+                                <h2>헌금-[[${paper.offername}]]</h2>
+                            </div>
                         </div>
-                    </div>
-
+                    </header>
 
                     <hr class="Start" />
 
@@ -90,88 +91,91 @@
                     </div>
 
                     <hr class="Offering" />
-                    <br>
-                    <h2>헌금-[[${paper.offername}]]</h2>
+                        <br>
+                        <h2>헌금-[[${paper.offername}]]</h2>
 
-                    <!--이 파트는 다음 주에도 다시 쓸 수 있도록 해야 함-->
-                    <hr class="Notice" />
-                    <h2>연합 광고</h2>
-                    <p th:utext="${paper.notice.replace('다.', '다.<br/>')}"></p>
+                        <!--이 파트는 다음 주에도 다시 쓸 수 있도록 해야 함-->
+                        <hr class="Notice" />
+                        <h2>연합 광고</h2>
+                        <p th:utext="${paper.notice.replace('다.', '다.<br/>')}"></p>
 
-                    <h2>부서 광고</h2>
-                    <h4><청년1부></h4>
-                    <p th:utext="${paper.notice1.replace('다.', '다.<br/>')}"></p>
+                        <h2>부서 광고</h2>
+                        <h4><청년1부></h4>
+                        <p th:utext="${paper.notice1.replace('다.', '다.<br/>')}"></p>
+                        
+                        <h4><청년2부></h4>
+                        <p th:utext="${paper.notice2.replace('다.', '다.<br/>')}"></p>
+                        
+                        <h4><청년3부></h4>
+                        <p th:utext="${paper.notice3.replace('다.', '다.<br/>')}"></p>
+                        
+                        <!--여기까지-->
 
-                    <h4><청년2부></h4>
-                    <p th:utext="${paper.notice2.replace('다.', '다.<br/>')}"></p>
-
-                    <h4><청년3부></h4>
-                    <p th:utext="${paper.notice3.replace('다.', '다.<br/>')}"></p>
-
-                    <!--여기까지-->
-
-                    <hr class="Sermon" />
-                    <div class="row">
-                        <h2 th:text="' 설교- ' + ${paper.speachname} + ' 목사'"></h2>
-                    </div>
-                    <!--<div class="row">
-                        <h3>주제: </h3>
-                        <div class="col-6">
-                            <input type="text" name="Topic" id="Topic" value="" placeholder="Enter the message" />
-                            <br>
-                            <br>
-                        </div>
-
-                        &lt;!&ndash;사용자가 원할 때 +버튼 눌러서 추가할 수 있도록 한다.&ndash;&gt;
+                        <hr class="Sermon" />
                         <div class="row">
-                            <h4>1.</h4>
-                            <div class="">
-                                <select name="book1" id="book1">
-                                    <option value="1">시편</option>
-                                    <option value="2">데살로니가전서</option>
-                                </select>
+                            <h2 th:text="' 설교- ' + ${paper.speachname} + ' 목사'"></h2>
+                            <div class="col-12-xsmall">
+                                <input type="text" th:name="speachname" />
                             </div>
-                            <div class="">
-                                <input type="text" name="chap1" id="chap1">
-                            </div>
-                            <h3>장 </h3>
-                            <div class="">
-                                <input type="text" name="verse1" id="verse1">
-                            </div>
-                            <h3>절~</h3>
-                            <div class="">
-                                <input type="text" name="verse2" id="verse2">
-                            </div>
-                            <h3>절</h3>
                         </div>
-                    </div>-->
-                    <!--여기까지-->
+                        <!--<div class="row">
+                            <h3>주제: </h3>
+                            <div class="col-6">
+                                <input type="text" name="Topic" id="Topic" value="" placeholder="Enter the message" />
+                                <br>
+                                <br>
+                            </div>
 
-                    <hr class="Pray2" />
-                    <h2>기도</h2>
+                            &lt;!&ndash;사용자가 원할 때 +버튼 눌러서 추가할 수 있도록 한다.&ndash;&gt;
+                            <div class="row">
+                                <h4>1.</h4>
+                                <div class="">
+                                    <select name="book1" id="book1">
+                                        <option value="1">시편</option>
+                                        <option value="2">데살로니가전서</option>
+                                    </select>
+                                </div>
+                                <div class="">
+                                    <input type="text" name="chap1" id="chap1">
+                                </div>
+                                <h3>장 </h3>
+                                <div class="">
+                                    <input type="text" name="verse1" id="verse1">
+                                </div>
+                                <h3>절~</h3>
+                                <div class="">
+                                    <input type="text" name="verse2" id="verse2">
+                                </div>
+                                <h3>절</h3>
+                            </div>
+                        </div>-->
+                        <!--여기까지-->
 
-                    <hr class="Song3" />
-                    <h2>송영-찬송가 5장</h2>
-                    <p>이 천지간 만물들아 복 주시는 주 여호와<br>
-                        전능 성부 성자 성령 찬송하고 찬송하세 아멘.</p>
-                    <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+                        <hr class="Pray2" />
+                        <h2>기도</h2>
 
-                    <hr class="Benediction">
-                    <h2>축도</h2>
+                        <hr class="Song3" />
+                        <h2>송영-찬송가 5장</h2>
+                        <p>이 천지간 만물들아 복 주시는 주 여호와<br>
+                            전능 성부 성자 성령 찬송하고 찬송하세 아멘.</p>
+                        <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
 
-                    <hr class="NextWeek">
-                    <h2>다음 주 예배</h2>
-                    <div class="row">
-                        <h3>기도-[[${paper.nprayname}]]</h3>
+                        <hr class="Benediction">
+                        <h2>축도</h2>
 
-                        <h3>교독-[[${paper.nrespname}]]</h3>
+                        <hr class="NextWeek">
+                        <h2>다음 주 예배</h2>
+                        <div class="row">
+                            <h3>기도-[[${paper.nprayname}]]</h3>
 
-                        <h3>헌금-[[${paper.noffername}]]</h3>
-                    </div>
+                            <h3>교독-[[${paper.nrespname}]]</h3>
+
+                            <h3>헌금-[[${paper.noffername}]]</h3>
+                        </div>
                 </section>
-            </form>
+                <button type="submit" formmethod="post" onclick="javascript: form.action='/createpaper';">주보 만들기</button>
+            </div>
         </div>
-    </div>
     </form>
     <!-- Sidebar -->
     <div id="sidebar">
@@ -203,7 +207,6 @@
                         <li class="icon solid fa-phone">02-415-1323</li>
                         <li class="icon solid fa-home">05572 서울특별시 송파구 올림픽로4길 17, A-201</li>
                     </ul>
-                </header>
             </section>
             <!-- Footer -->
             <footer id="footer">
