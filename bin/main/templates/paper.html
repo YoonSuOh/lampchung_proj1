@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>주보</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+            <header id="header">
+                <a th:href="@{/create}" class="logo">
+                    <h1 th:text="${paper.title} + ' 청년예배 주보'"></h1>
+                    <h3 th:text="' 인도- ' + ${paper.guidename} + ' 목사'"></h3>
+                </a>
+            </header>
+            <form enctype="multipart/form-data">
+                <!-- Content -->
+                <section>
+                    <header class="main">
+                        <div class="row">
+                            <div class="row">
+                                <h2>기도-[[${paper.prayname}]]</h2>
+                            </div>
+                            <div class="row">
+                                <h2>교독-[[${paper.respname}]]</h2>
+                            </div>
+                            <div class="row">
+                                <h2>헌금-[[${paper.offername}]]</h2>
+                            </div>
+                        </div>
+                    </header>
+
+                    <hr class="Start" />
+
+                    <h2>예배로의 부름-인도자</h2>
+
+                    <hr class="Song" />
+
+                    <h2>송영-"만복의 근원 하나님"</h2>
+                    <p>만복의 근원 하나님 온 백성 찬송 드리고<br>
+                        저 천사여 찬송하세 찬송 성부 성자 성령 아멘</p>
+                    <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+
+                    <hr class="Response" />
+                    <div class="row">
+                        <h2>교독-[[${paper.respname}]]</h2>
+                        <!--여기까지-->
+                    </div>
+
+                    <hr class="ApostleCreed" />
+                    <h2>신앙고백-사도신경</h2>
+                    <p>나는 전능하신 아버지 하나님, 천지의 창조주를 믿습니다.<br>
+                        나는 그의 유일하신 아들, 우리 주 예수 그리스도를 믿습니다.<br>
+                        그는 성령으로 잉태되어 동정녀 마리아에게서 나시고, <br>
+                        본디오 빌라도 치하에서 고난을 받아 십자가에 못 박혀 죽으시고,<br>
+                        장사된 지 사흘 만에 죽은 자 가운데서 다시 살아나셨으며,<br>
+                        하늘에 오르셔서 전능하신 아버지 하나님 우편에 앉아 계시다가,<br>
+                        거기로부터 살아있는 자와 죽은 자를 심판하러 오십니다.<br>
+                        나는 성령을 믿으며, 거룩한 공교회와 성도의 교제와<br>
+                        죄를 용서받는 것과 몸의 부활과 영생을 믿습니다.<br>
+                        아멘.</p>
+
+                    <!--이 부분은 데이터베이스와의 연계가 필요함.-->
+                    <hr class="Song2" />
+                    <h2>찬양-찬양팀</h2>
+                    <p>[[${paper.ccm}]]</p>
+
+                    <!--위의 기도 입력에서 가져오도록 javascript 설정 필요-->
+                    <hr class="Pray" />
+                    <h2>기도-[[${paper.prayname}]]</h2>
+                    <!--여기까지-->
+
+                    <hr class="Read" />
+                    <div class="row">
+                        <h2>성경 봉독</h2>
+                        <p>[[${paper.sentence}]]</p>
+                    </div>
+
+                    <hr class="Offering" />
+                    <br>
+                    <h2>헌금-[[${paper.offername}]]</h2>
+
+                    <!--이 파트는 다음 주에도 다시 쓸 수 있도록 해야 함-->
+                    <hr class="Notice" />
+                    <h2>연합 광고</h2>
+                    <p th:utext="${paper.notice.replace('다.', '다.<br/>')}"></p>
+
+                    <h2>부서 광고</h2>
+                    <h4><청년1부></h4>
+                    <p th:utext="${paper.notice1.replace('다.', '다.<br/>')}"></p>
+
+                    <h4><청년2부></h4>
+                    <p th:utext="${paper.notice2.replace('다.', '다.<br/>')}"></p>
+
+                    <h4><청년3부></h4>
+                    <p th:utext="${paper.notice3.replace('다.', '다.<br/>')}"></p>
+
+                    <!--여기까지-->
+
+                    <hr class="Sermon" />
+                    <div class="row">
+                        <h2 th:text="' 설교- ' + ${paper.speachname} + ' 목사'"></h2>
+                        <div class="col-12-xsmall">
+                            <input type="text" th:name="speachname" />
+                        </div>
+                    </div>
+                    <!--<div class="row">
+                        <h3>주제: </h3>
+                        <div class="col-6">
+                            <input type="text" name="Topic" id="Topic" value="" placeholder="Enter the message" />
+                            <br>
+                            <br>
+                        </div>
+
+                        &lt;!&ndash;사용자가 원할 때 +버튼 눌러서 추가할 수 있도록 한다.&ndash;&gt;
+                        <div class="row">
+                            <h4>1.</h4>
+                            <div class="">
+                                <select name="book1" id="book1">
+                                    <option value="1">시편</option>
+                                    <option value="2">데살로니가전서</option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <input type="text" name="chap1" id="chap1">
+                            </div>
+                            <h3>장 </h3>
+                            <div class="">
+                                <input type="text" name="verse1" id="verse1">
+                            </div>
+                            <h3>절~</h3>
+                            <div class="">
+                                <input type="text" name="verse2" id="verse2">
+                            </div>
+                            <h3>절</h3>
+                        </div>
+                    </div>-->
+                    <!--여기까지-->
+
+                    <hr class="Pray2" />
+                    <h2>기도</h2>
+
+                    <hr class="Song3" />
+                    <h2>송영-찬송가 5장</h2>
+                    <p>이 천지간 만물들아 복 주시는 주 여호와<br>
+                        전능 성부 성자 성령 찬송하고 찬송하세 아멘.</p>
+                    <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+
+                    <hr class="Benediction">
+                    <h2>축도</h2>
+
+                    <hr class="NextWeek">
+                    <h2>다음 주 예배</h2>
+                    <div class="row">
+                        <h3>기도-[[${paper.nprayname}]]</h3>
+
+                        <h3>교독-[[${paper.nrespname}]]</h3>
+
+                        <h3>헌금-[[${paper.noffername}]]</h3>
+                    </div>
+                </section>
+                <button type="submit" formmethod="post" onclick="javascript: form.action='/createpaper';">주보 만들기</button>
+        </div>
+    </div>
+    </form>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a th:href="@{/create}">주보 생성</a></li>
+                    <li><a href="elements.html">주보 목록</a></li>
+                </ul>
+            </nav>
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>문의</h2>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="#">2001cupid@naver.com</a></li>
+                        <li class="icon solid fa-phone">02-415-1323</li>
+                        <li class="icon solid fa-home">05572 서울특별시 송파구 올림픽로4길 17, A-201</li>
+                    </ul>
+            </section>
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Lamp Church. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/browser.min.js"></script>
+<script src="/js/breakpoints.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
