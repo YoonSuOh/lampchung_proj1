@@ -131,8 +131,8 @@
                             <input type="text" name="last">끝나는 절
                             <button type="submit" formmethod="post" onclick="javascript: form.action='/bible';">가져오기</button>
                         <div th:if="${list != null}">
+                            <input type="text" th:name="todaybible">
                             <div th:each="list : ${list}">
-                                <input type="text" th:name="todaybible">
                                 <input type="hidden" th:name="paragraph" th:value="${list.paragraph}">
                                 <input type="hidden" th:name="sentence" th:value="${list.sentence}">
                                 <p>[[${list.paragraph}]] [[${list.sentence}]]</p>
@@ -141,7 +141,6 @@
                         <hr class="Offering" />
                         <br>
                         <h2>헌금</h2>
-
                         <!--이 파트는 다음 주에도 다시 쓸 수 있도록 해야 함-->
                         <hr class="Notice" />
                         <h2>연합 광고</h2>
@@ -246,9 +245,9 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="index.html">메인</a></li>
+                    <li><a th:href="@{/}">메인</a></li>
                     <li><a th:href="@{/create}">주보 생성</a></li>
-                    <li><a href="elements.html">주보 목록</a></li>
+                    <li><a th:href="@{/page}">주보 목록</a></li>
                 </ul>
             </nav>
             <!-- Section -->

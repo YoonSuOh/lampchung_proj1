@@ -32,10 +32,11 @@
             아멘.
         </p>
         <h2>찬양-찬양팀</h2>
-        <p>[[${paper.ccm}]]</p>
+        <p th:utext="${paper.ccm.replace(',', '<br/>')}"></p>
+        <img th:src="@{/ccm/__${paper.ccm}__}" th:alt="${paper.ccm.replace(',', '<br/>')}" />
         <h2>기도-[[${paper.prayname}]]</h2>
         <h2>성경봉독</h2>
-        <p>[[${paper.sentence}]]</p>
+        <p th:utext="${paper.sentence.replace(',', '<br/>')}"></p>
         <h2>헌금-[[${paper.offername}]]</h2>
         <h2>연합 광고</h2>
         <p th:utext="${paper.notice.replace('다.', '다.<br/>')}"></p>
