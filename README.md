@@ -11,3 +11,8 @@
 3. 역할 담당<br>
 -SuOh-Yoon : Back-End<br>
 -Mingi-Hong : Front-End<br>
+
+4. 주요 기능<br>
+-주보 제작 자동화(제작 시 성경 구절 찾아서 가져오기 등)
+-주보 목록화
+-주보 페이지화
