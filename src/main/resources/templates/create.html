@@ -107,7 +107,6 @@
                     <ol>
                         <li th:each="item : ${ccmList}">
                             <p th:text="${item.image.substring(0, item.image.lastIndexOf('.'))}"></p>
-                            <input type="hidden" th:name="ccm" th:value="${item.image}">
                         </li>
                     </ol>
                     <ul style="list-style: none;">

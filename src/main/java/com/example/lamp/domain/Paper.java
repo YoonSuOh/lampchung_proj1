@@ -18,7 +18,10 @@ public class Paper {
     String prayname;
     String respname;
     String offername;
-    String ccm;
+    String ccm1;
+    String ccm2;
+    String ccm3;
+    String ccm4;
     String todaybible;
     String paragraph;
     String sentence;

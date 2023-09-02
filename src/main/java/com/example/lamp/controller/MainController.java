@@ -19,6 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MainController {
     private final PaperService paperService;
+    private CcmDao dao;
 
     @GetMapping("/")
     public String Lamp(Model model){

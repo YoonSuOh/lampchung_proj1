@@ -5,7 +5,7 @@
 <mapper namespace="com.example.lamp.dao.PaperDao">
     <!-- 주보 생성 -->
     <insert id="createpaper" useGeneratedKeys="true" keyProperty="idx">
-        INSERT INTO paper (title, guidename, prayname, respname, offername, ccm, todaybible, paragraph, sentence, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername)  VALUES (#{title}, #{guidename}, #{prayname}, #{respname}, #{offername}, #{ccm}, #{todaybible}, #{paragraph}, #{sentence}, #{notice}, #{notice1}, #{notice2}, #{notice3}, #{speachname}, #{nprayname}, #{nrespname}, #{noffername})
+        INSERT INTO paper (title, guidename, prayname, respname, offername, ccm1, ccm2, ccm3, ccm4, todaybible, paragraph, sentence, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername)  VALUES (#{title}, #{guidename}, #{prayname}, #{respname}, #{offername}, #{ccm1}, #{ccm2}, #{ccm3}, #{ccm4} #{todaybible}, #{paragraph}, #{sentence}, #{notice}, #{notice1}, #{notice2}, #{notice3}, #{speachname}, #{nprayname}, #{nrespname}, #{noffername})
     </insert>
 
     <!-- 주보 목록 -->
