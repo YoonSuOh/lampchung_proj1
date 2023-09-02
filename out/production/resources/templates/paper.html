@@ -7,7 +7,7 @@
 -->
 <html>
 <head>
-    <title>주보</title>
+    <title>[[${paper.title}]] 청년예배 주보</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/css/main.css" />
@@ -33,9 +33,9 @@
                     <div class="col-1">
                     <h2 th:text="'인도- ' + ${paper.guidename} + ' 목사'"></h2>
                         <div class="row">
-                            <h3>기도-[[${paper.prayname}]]</h3>
-                            <h3>교독-[[${paper.respname}]]</h3>
-                            <h3>헌금-[[${paper.offername}]]</h3>
+                        <h3>기도-[[${paper.prayname}]]</h3>
+                        <h3>교독-[[${paper.respname}]]</h3>
+                        <h3>헌금-[[${paper.offername}]]</h3>
                         </div>
                     </div>
 
@@ -52,10 +52,8 @@
                     <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
 
                     <hr class="Response" />
-                    <div class="row">
                         <h2>교독-[[${paper.respname}]]</h2>
                         <!--여기까지-->
-                    </div>
 
                     <hr class="ApostleCreed" />
                     <h2>신앙고백-사도신경</h2>
@@ -82,9 +80,12 @@
                     <!--여기까지-->
 
                     <hr class="Read" />
+                        <h2>성경 봉독 : [[${paper.todaybible}]]<br></h2>
                     <div class="row">
-                        <h2>성경 봉독 : [[${paper.todaybible}]]</h2>
-                        <p th:utext="${paper.paragraph.replace(',', '<br/>')}"><p th:utext="${paper.sentence.replace(',', '<br/>')}">
+                        <p th:utext="${paper.paragraph.replace(',', '<br/>')}">
+                        </p>
+                        <p th:utext="${paper.sentence.replace(',', '<br/>')}">
+                        </p>
                     </div>
 
                     <hr class="Offering" />
@@ -109,9 +110,7 @@
                     <!--여기까지-->
 
                     <hr class="Sermon" />
-                    <div class="row">
                         <h2 th:text="' 설교- ' + ${paper.speachname} + ' 목사'"></h2>
-                    </div>
                     <!--<div class="row">
                         <h3>주제: </h3>
                         <div class="col-6">
