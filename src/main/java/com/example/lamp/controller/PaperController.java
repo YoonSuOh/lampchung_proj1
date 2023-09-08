@@ -21,10 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.File;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequiredArgsConstructor
@@ -36,12 +33,17 @@ public class PaperController {
     private final Logger log = LoggerFactory.getLogger(PaperController.class.getName());
     private Ccm savedCcmFile;
     private List<Bible> savedBibleList;
-    private List<Ccm> ccmList = new LinkedList<>();
+    private List<Ccm> ccmList = new ArrayList<>();
+    private String ccms;
     private static final String UPLOAD_DIR = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "static" + File.separator + "ccm";
     // 주보 생성 페이지로 이동
     @GetMapping("/create")
     public String create(Model model){
+        ccms = ccmList.toString();
         model.addAttribute("list", savedBibleList);
+        for(int i=0;i<ccmList.size();i++){
+            System.out.println("출력 결과 : " + ccmList.get(i).getImage());
+        }
         model.addAttribute("ccmList", ccmList);
         return "/create";
     }
@@ -82,23 +84,32 @@ public class PaperController {
 
     // 주보 생성
     @PostMapping("/createpaper")
-    public String createpaper(@RequestParam("title") String title, @RequestParam("guidename") String guidename, @RequestParam("prayname") String prayname, @RequestParam("respname") String respname, @RequestParam("offername") String offername, @RequestParam("todaybible") String todaybible, @RequestParam("paragraph") String paragraph, @RequestParam("sentence") String sentence, @RequestParam("Notice") String notice, @RequestParam("Notice1") String notice1, @RequestParam("Notice2") String notice2, @RequestParam("Notice3") String notice3, @RequestParam("speachname") String speachname, @RequestParam("nprayname") String nprayname, @RequestParam("nrespname") String nrespname, @RequestParam("noffername") String noffername) throws Exception{
-        String ccm="";
-        Iterator<Ccm> it = ccmList.iterator();
-        while(it.hasNext()){
-            ccm = ccm + it.next() + "";
-        }
-        log.info(ccm);
-        String[] parts = ccm.split(",");
+    public String createpaper(HttpServletRequest req, @RequestParam("title") String title, @RequestParam("guidename") String guidename, @RequestParam("prayname") String prayname, @RequestParam("respname") String respname, @RequestParam("offername") String offername, @RequestParam("todaybible") String todaybible, @RequestParam("paragraph") String paragraph, @RequestParam("sentence") String sentence, @RequestParam("Notice") String notice, @RequestParam("Notice1") String notice1, @RequestParam("Notice2") String notice2, @RequestParam("Notice3") String notice3, @RequestParam("speachname") String speachname, @RequestParam("nprayname") String nprayname, @RequestParam("nrespname") String nrespname, @RequestParam("noffername") String noffername) throws Exception{
+        log.info("찬양 : " + ccms);
+        log.info("리스트 사이즈 : " + ccmList.size());
+        String[] ccmlist = new String[4];
 
-        for(int i=0;i<=3;i++){
-            log.info(parts[i]);
+        for(int i=0;i<ccmList.size();i++){
+            ccmlist[i] = ccmList.get(i).getImage();
         }
 
-        String ccm1 = parts[0];
-        String ccm2 = parts[1];
-        String ccm3 = parts[2];
-        String ccm4 = parts[3];
+
+        // 분리된 문자열을 각각의 변수에 저장
+        String ccm1 = ccmlist[0];
+        String ccm2 = ccmlist[1];
+        String ccm3 = ccmlist[2];
+        String ccm4;
+        if(ccmlist[3]!=null){
+            ccm4 = ccmlist[3];
+        } else {
+            ccm4 = null;
+        }
+
+        // 결과 출력
+        log.info("출력 1 : " + ccm1);
+        log.info("출력 2 : " + ccm2);
+        log.info("출력 3 : " + ccm3);
+        log.info("출력 4 : " + ccm4);
 
         paperService.createpaper(title, guidename, prayname, respname, offername, ccm1, ccm2, ccm3, ccm4, todaybible, paragraph, sentence, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername);
 
