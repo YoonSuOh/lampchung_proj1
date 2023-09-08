@@ -36,32 +36,32 @@
 
                                 <h2>날짜: </h2>
                                 <div class="col-12-xsmall">
-                                    <input type="text" name="title" id="title" value="" placeholder="Name" />
+                                    <input type="text" name="title" id="title" th:value="${savetitle}" placeholder="Name" />
                                 </div>
                             </div>
                             <div class="row">
                                 <h2> 인도: </h2>
                                 <div class="col-12-xsmall">
-                                    <input type="text" name="guidename" id="GuideName" value="" placeholder="Name" />
+                                    <input type="text" name="guidename" id="GuideName" th:value="${saveguidename}" placeholder="Name" />
                                 </div>
                             </div>
 
                             <div class="row">
                                 <h2>기도: </h2>
                                 <div class="col-12-xsmall">
-                                    <input type="text" name="prayname" id="PrayName" value="" placeholder="Name" />
+                                    <input type="text" name="prayname" id="PrayName" th:value="${saveprayname}" placeholder="Name" />
                                 </div>
                             </div>
                             <div class="row">
                                 <h2>교독: </h2>
                                 <div class="col-12-xsmall">
-                                    <input type="text" name="respname" id="RespName" value="" placeholder="Name" />
+                                    <input type="text" name="respname" id="RespName" th:value="${saverespname}" placeholder="Name" />
                                 </div>
                             </div>
                             <div class="row">
                                 <h2>헌금: </h2>
                                 <div class="col-12-xsmall">
-                                    <input type="text" name="offername" id="OfferName" value="" placeholder="Name" />
+                                    <input type="text" name="offername" id="OfferName" th:value="${saveoffername}" placeholder="Name" />
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                             <button type="submit" formmethod="post" onclick="javascript: form.action='/bible';">가져오기</button>
                         </div>
                         <div th:if="${list != null}">
-                            <input type="text" th:name="todaybible">
+                            <input type="text" th:name="todaybible" value="${savetodaybible}">
                             <div th:each="list : ${list}">
                                 <input type="hidden" th:name="paragraph" th:value="${list.paragraph}">
                                 <input type="hidden" th:name="sentence" th:value="${list.sentence}">
@@ -161,18 +161,18 @@
                         <!--이 파트는 다음 주에도 다시 쓸 수 있도록 해야 함-->
                         <hr class="Notice" />
                         <h2>연합 광고</h2>
-                        <textarea name="Notice" id="Notice" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="Notice" id="Notice" placeholder="Enter your message" rows="6" th:value="${savenotice}"></textarea>
                         <br>
 
                         <h2>부서 광고</h2>
                         <h4><청년1부></h4>
-                        <textarea name="Notice1" id="Notice" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="Notice1" id="Notice" placeholder="Enter your message" rows="6" th:value="${savenotice1}"></textarea>
                         <br>
                         <h4><청년2부></h4>
-                        <textarea name="Notice2" id="Notice" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="Notice2" id="Notice" placeholder="Enter your message" rows="6" th:value="${savenotice2}"></textarea>
                         <br>
                         <h4><청년3부></h4>
-                        <textarea name="Notice3" id="Notice" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="Notice3" id="Notice" placeholder="Enter your message" rows="6" th:value="${savenotice3}"></textarea>
                         <br>
                         <!--여기까지-->
 
@@ -180,7 +180,7 @@
                         <div class="row">
                             <h2>설교 - </h2>
                             <div class="col-12-xsmall">
-                                <input type="text" th:name="speachname" />
+                                <input type="text" th:name="speachname" th:value="${savespeachname}"/>
                             </div>
                         </div>
                         <!--<div class="row">
@@ -233,17 +233,17 @@
                         <div class="row">
                             <h3>기도: </h3>
                             <div class="col-12-xsmall">
-                                <input type="text" name="nprayname" id="NPrayName" value="" placeholder="Name" />
+                                <input type="text" name="nprayname" id="NPrayName" th:value="${savenprayname}" placeholder="Name" />
                             </div>
 
                             <h3>교독: </h3>
                             <div class="col-12-xsmall">
-                                <input type="text" name="nrespname" id="NRespName" value="" placeholder="Name" />
+                                <input type="text" name="nrespname" id="NRespName" th:value="${savenrespname}" placeholder="Name" />
                             </div>
 
                             <h3>헌금: </h3>
                             <div class="col-12-xsmall">
-                                <input type="text" name="noffername" id="NOfferName" value="" placeholder="Name" />
+                                <input type="text" name="noffername" id="NOfferName" th:value="${savenoffername}" placeholder="Name" />
                             </div>
                         </div>
                 </section>
