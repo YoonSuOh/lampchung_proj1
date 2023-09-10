@@ -332,7 +332,7 @@ hr {
         padding-top: 0.75em; }
   .row {
     margin-top: 0;
-    margin-left: -1.5em; }
+    margin-left: -1em; }
     .row > * {
       padding: 0 0 0 0.8em; }
     .row.gtr-uniform {
@@ -458,7 +458,7 @@ hr {
             padding-top: 0.75em; }
       .row {
         margin-top: 0;
-        margin-left: -1.5em; }
+        margin-left: -1em; }
         .row > * {
           padding: 0 0 0 1em; }
         .row.gtr-uniform {
@@ -584,7 +584,7 @@ hr {
             padding-top: 0.75em; }
       .row {
         margin-top: 0;
-        margin-left: -1.5em; }
+        margin-left: -1em; }
         .row > * {
           padding: 0 0 0 1.5em; }
         .row.gtr-uniform {
@@ -710,7 +710,7 @@ hr {
             padding-top: 0.75em; }
       .row {
         margin-top: 0;
-        margin-left: -1.5em; }
+        margin-left: -1em; }
         .row > * {
           padding: 0 0 0 1.5em; }
         .row.gtr-uniform {
@@ -836,7 +836,7 @@ hr {
             padding-top: 0.75em; }
       .row {
         margin-top: 0;
-        margin-left: -1.5em; }
+        margin-left: -1em; }
         .row > * {
           padding: 0 0 0 1.5em; }
         .row.gtr-uniform {
@@ -962,7 +962,7 @@ hr {
             padding-top: 0.75em; }
       .row {
         margin-top: 0;
-        margin-left: -1.5em; }
+        margin-left: -1em; }
         .row > * {
           padding: 0 0 0 1.5em; }
         .row.gtr-uniform {
@@ -2274,3 +2274,7 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+div > #getbible {
+  display:block;
+}
