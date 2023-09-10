@@ -52,8 +52,8 @@
                     <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
 
                     <hr class="Response" />
-                        <h2>교독-[[${paper.respname}]]</h2>
-                        <!--여기까지-->
+                    <h2>교독-[[${paper.respname}]]</h2>
+                    <p th:utext="${paper.resp.replace(',','<br>')}"></p>
 
                     <hr class="ApostleCreed" />
                     <h2>신앙고백-사도신경</h2>
@@ -80,12 +80,11 @@
                     <!--여기까지-->
 
                     <hr class="Read" />
-                        <h2>성경 봉독 : [[${paper.todaybible}]]<br></h2>
-                    <div class="row">
-                        <p th:utext="${paper.paragraph.replace(',', '<br/>')}">
-                        </p>
-                        <p th:utext="${paper.sentence.replace(',', '<br/>')}">
-                        </p>
+                        <h2>성경 봉독 : <br></h2>
+                    <div id="getbible">
+                        <div th:each="list : ${list}">
+                            <p th:text="|${list.paragraph} ${list.sentence}|"></p>
+                        </div>
                     </div>
 
                     <hr class="Offering" />
