@@ -98,11 +98,11 @@
                         죄를 용서받는 것과 몸의 부활과 영생을 믿습니다.<br>
                         아멘.</p>
 
-                    <!--이 부분은 데이터베이스와의 연계가 필요함.-->
                     <hr class="Song2" />
+                    <a id="Song2"></a>
                     <h2>찬양-찬양팀</h2>
                         <input type="file" name="files" multiple="multiple"/>
-                        <button type="submit" formmethod="post" onclick="javascript: form.action='/upload';">Upload</button>
+                        <button type="submit" formmethod="post" onclick="javascript: form.action='/upload'">Upload</button>
                     <ol>
                         <li th:each="item : ${ccmList}">
                             <p th:text="${item.image.substring(0, item.image.lastIndexOf('.'))}"></p>
@@ -120,6 +120,7 @@
                     <!--여기까지-->
 
                     <hr class="Read" />
+                    <a id="Read"></a>
                     <div class="row">
                         <h2>성경 봉독 - </h2>
                         <div class="col-12-xsmall">

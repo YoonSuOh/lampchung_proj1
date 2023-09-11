@@ -90,7 +90,7 @@ public class PaperController {
         log.info("출력 6  : " + chapter);
         log.info("출력 7 : " + start);
         log.info("출력 8 : " + fin);
-        return "redirect:/create";
+        return "redirect:/create/#Read";
     }
 
     // 찬양 악보 업로드 및 가져오기
@@ -128,7 +128,7 @@ public class PaperController {
         savenprayname=nprayname;
         savenrespname=nrespname;
         savenoffername=noffername;
-        return "redirect:/create"; // 주보 생성 페이지로 돌아감
+        return "redirect:/create/#Song2"; // 주보 생성 페이지로 돌아감
     }
 
     // 주보 생성
