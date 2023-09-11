@@ -22,9 +22,12 @@ public class Paper {
     String ccm2;
     String ccm3;
     String ccm4;
-    String todaybible;
-    String paragraph;
-    String sentence;
+    String resp;
+    String long_label;
+    int chapter;
+    int paragraph;
+    int start;
+    int fin;
     String notice;
     String notice1;
     String notice2;

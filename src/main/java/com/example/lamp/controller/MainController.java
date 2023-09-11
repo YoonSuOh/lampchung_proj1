@@ -39,7 +39,9 @@ public class MainController {
     @GetMapping("/paper")
     public String Paper(Model model, @RequestParam(required = false)Integer idx) throws Exception{
         Paper paper = paperService.paper(idx);
+        List<Paper> list = paperService.getbible(idx);
         model.addAttribute("paper", paper);
+        model.addAttribute("list", list);
         return "/paper";
     }
 }
