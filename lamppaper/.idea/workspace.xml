@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="872e4eef-ad42-4036-8b0c-55517d4d45a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/LampApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/LampApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/controller/PaperController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/controller/PaperController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/dao/BibleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/dao/BibleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/dao/CcmDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/dao/CcmDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/dao/PaperDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/dao/PaperDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/domain/Bible.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/domain/Bible.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/domain/Ccm.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/domain/Ccm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/domain/Paper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/domain/Paper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/service/BibleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/service/BibleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/service/BibleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/service/BibleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/service/PaperService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/service/PaperService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/classes/com/example/lamp/service/PaperServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/classes/com/example/lamp/service/PaperServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/mybatis/mapper/BibleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/mybatis/mapper/BibleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/mybatis/mapper/CcmMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/mybatis/mapper/CcmMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/mybatis/mapper/PaperMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/mybatis/mapper/PaperMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/KakaoTalk_20230208_105345328.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/KakaoTalk_20230208_105345328.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/KakaoTalk_20230612_202741883.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/KakaoTalk_20230612_202741883.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/KakaoTalk_20230714_195421573_04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/KakaoTalk_20230714_195421573_04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/낮은곳으로.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/낮은곳으로.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/모든 상황 속에서.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/모든 상황 속에서.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/모든 생명들아 소리쳐.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/모든 생명들아 소리쳐.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/물러서지 않으리.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/물러서지 않으리.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/빛으로 비추시네.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/빛으로 비추시네.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/시간을 뚫고.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/시간을 뚫고.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/우리는 주의 움직이는 교회.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/우리는 주의 움직이는 교회.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/우린 물러서지 않으리.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/우린 물러서지 않으리.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/우린_물러서지_않으리.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/우린_물러서지_않으리.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/은혜 아래 있네.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/은혜 아래 있네.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/주님의 시선.png" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/주님의 시선.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/주님의 임재 앞에서.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/주님의 임재 앞에서.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/ccm/주의 이름 높이며 주를 찬양.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/ccm/주의 이름 높이며 주를 찬양.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/css/fontawesome-all.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/css/fontawesome-all.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic01.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic03.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic04.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic05.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic05.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic06.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic07.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic08.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic09.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/images/pic11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/images/pic11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/js/breakpoints.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/js/breakpoints.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/js/browser.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/js/browser.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/js/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/js/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/js/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/base/_page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/base/_page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/base/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/base/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_actions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_actions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_box.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_box.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_contact.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_contact.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_features.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_features.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_form.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_icon.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_icons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_icons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_image.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_image.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_mini-posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_mini-posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_pagination.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_pagination.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_posts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_posts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_row.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_row.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_section.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_section.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/components/_table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/components/_table.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_banner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_banner.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_menu.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_sidebar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/layout/_wrapper.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/layout/_wrapper.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_breakpoints.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_breakpoints.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_functions.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_functions.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_html-grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_html-grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/libs/_vendor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/libs/_vendor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/sass/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-brands-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-brands-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-brands-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-brands-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-brands-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-regular-400.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-regular-400.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-regular-400.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-regular-400.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-regular-400.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-solid-900.eot" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-solid-900.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-solid-900.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-solid-900.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/static/webfonts/fa-solid-900.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/static/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/elements.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/elements.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/generic.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/generic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/lamp.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/lamp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/resources/templates/paper.html" beforeDir="false" afterPath="$PROJECT_DIR$/../gradle/out/production/resources/templates/paper.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2V9lIYYXBfTNEAgUHXKiee6Ao5U" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Mario76/Desktop/lampchung_proj1",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="872e4eef-ad42-4036-8b0c-55517d4d45a8" name="Changes" comment="" />
+      <created>1694256099967</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694256099967</updated>
+      <workItem from="1694256100986" duration="37000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
