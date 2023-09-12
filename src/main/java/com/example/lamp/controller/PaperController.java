@@ -6,32 +6,18 @@ import com.example.lamp.domain.Bible;
 import com.example.lamp.domain.Ccm;
 import com.example.lamp.domain.Paper;
 import com.example.lamp.service.BibleService;
-<<<<<<< HEAD
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
-=======
 import com.example.lamp.service.PaperService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
->>>>>>> e2867ea109967910ff9fddbd0432edbd74eafc04
 import org.springframework.core.io.ResourceLoader;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
-<<<<<<< HEAD
-import org.springframework.web.servlet.ModelAndView;
 
-import java.io.*;
-=======
-
->>>>>>> e2867ea109967910ff9fddbd0432edbd74eafc04
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.io.File;
@@ -52,36 +38,6 @@ public class PaperController {
     private String savetitle, saveguidename, saveprayname, saverespname, saveoffername, saveresp, savelonglabel, savenotice, savenotice1, savenotice2, savenotice3, savespeachname, savenprayname, savenrespname, savenoffername;
     private int chapter, start, fin;
     private static final String UPLOAD_DIR = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "static" + File.separator + "ccm";
-<<<<<<< HEAD
-  // CcmDao의 의존성 주입
-    public PaperController(BibleService bibleService, CcmDao dao, ResourceLoader resourceLoader) {
-        this.dao = dao;
-        this.bibleService = bibleService;
-        this.resourceLoader = resourceLoader;
-    }
-
-    // PDF 파일로 저장
-    @RequestMapping("/{fileName}")
-    public ResponseEntity<Resource> resourceFileDownload(@PathVariable String fileName) {
-        try {
-            Resource resource = resourceLoader.getResource("file:/C:/Devroot/temp/" + fileName);
-            File file = resource.getFile();
-
-            return ResponseEntity.ok()
-                    .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getName() + "\"")
-                    .header(HttpHeaders.CONTENT_LENGTH, String.valueOf(file.length()))
-                    .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_OCTET_STREAM.toString())
-                    .body(resource);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return ResponseEntity.badRequest().body(null);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
-        }
-    }
-=======
->>>>>>> e2867ea109967910ff9fddbd0432edbd74eafc04
     // 주보 생성 페이지로 이동
     @GetMapping("/create")
     public String create(Model model){
@@ -103,6 +59,7 @@ public class PaperController {
         model.addAttribute("savenoffername", savenoffername);
         return "/create";
     }
+    // 교독문 가져오기
 
     // 성경 구절 가져오기
     @PostMapping("/bible")
