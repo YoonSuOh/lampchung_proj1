@@ -11,6 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/lamp.jpg">
 </head>
 <body class="is-preload">
 
@@ -81,7 +82,7 @@
                     <!--여기까지-->
 
                     <hr class="Read" />
-                        <h2>성경 봉독 : <br></h2>
+                        <h2>성경 봉독 : [[${paper.long_label}]] [[${paper.chapter}]]장 [[${paper.start}]]절-[[${paper.fin}]]절<br></h2>
                     <div id="getbible">
                         <div th:each="list : ${list}">
                             <p th:text="|${list.paragraph} ${list.sentence}|"></p>
