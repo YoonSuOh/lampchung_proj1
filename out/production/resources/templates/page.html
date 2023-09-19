@@ -30,13 +30,18 @@
             <form enctype="multipart/form-data">
                 <!-- Content -->
                 <section>
-                    <hr class="main"/>
-                    <header class="main">
-                        <ul>
-                            <div id="category" th:each="list : ${page}">
-                                <li><a th:href="@{/paper(idx=${list.idx})}">[[${list.title}]] 청년예배 주보</a></li>
+                        <div class="board_list_wrap">
+                            <div class="board_list">
+                                <div class="top">
+                                    <div class="num">번호</div>
+                                    <div class="title">제목</div>
+                                </div>
+                                <div th:each="list : ${page}">
+                                    <div class="num">[[${list.idx}]]</div>
+                                    <div class="title"><a th:href="@{/paper(idx=${list.idx})}">[[${list.title}]] 청년예배 주보</a></div>
+                                </div>
                             </div>
-                        </ul>
+                        </div>
                         <div class="board_page">
                             <a href="#" class="bt first"><<</a>
                             <a href="#" class="bt prev"><</a>
@@ -48,7 +53,6 @@
                             <a href="#" class="bt next">></a>
                             <a href="#" class="bt last">>></a>
                         </div>
-                    </header>
                 </section>
             </form>
             </header>
