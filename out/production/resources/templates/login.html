@@ -31,12 +31,23 @@
       <section id="banner">
         <div class="content">
           <header>
-            <h1>주보시스템에 오신 것을 환영합니다!</h1>
-            <h4>더욱 간편한, 더욱 보기쉬운 주보만들기</h4>
+            <h2>로그인</h2>
+
+            <div class="row">
+            <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="ID" id="ID" th:value="${savetitle}" placeholder="ID" />
+            </div>
+            </div>
+            <div class="row">
+            <h4>Password</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="Password" id="Password" th:value="${savetitle}" placeholder="Password" />
+            </div>
+            </div>
           </header>
-          <p>주보를 만들 때 각 섹션에 맞게 입력만 해주시면 됩니다.</p>
           <ul class="actions">
-            <li><a th:href="@{/create}" class="button big">주보 만들러 가기</a></li>
+            <li><a th:href="@{/create}" class="button big">로그인</a></li>
           </ul>
         </div>
       </section>
