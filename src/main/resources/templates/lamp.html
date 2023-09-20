@@ -35,7 +35,11 @@
                         <h4>더욱 간편한, 더욱 보기쉬운 주보만들기</h4>
                     </header>
                     <p>주보를 만들 때 각 섹션에 맞게 입력만 해주시면 됩니다.</p>
-                    <ul class="actions">
+                    <ul th:if="${#httpServletRequest.getSession(false) != null}" class="actions">
+                        <li><a th:href="@{/create}" class="button big">주보 만들러 가기</a></li>
+                        <li><a th:href="@{/logout}" class="button big">로그아웃</a></li>
+                    </ul>
+                    <ul th:unless="${#httpServletRequest.getSession(false) != null}" class="actions">
                         <li><a th:href="@{/create}" class="button big">주보 만들러 가기</a></li>
                         <li><a th:href="@{/login}" class="button big">로그인</a></li>
                     </ul>
