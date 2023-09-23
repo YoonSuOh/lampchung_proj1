@@ -1,7 +1,6 @@
 package com.example.lamp.service;
 
 import com.example.lamp.domain.Paper;
-
 import java.util.List;
 
 public interface PaperService {

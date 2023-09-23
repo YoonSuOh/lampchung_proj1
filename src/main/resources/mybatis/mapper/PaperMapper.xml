@@ -10,7 +10,9 @@
 
     <!-- 주보 목록 -->
     <select id="list">
-        SELECT * from paper
+        select
+            *
+        from paper
     </select>
 
     <!-- 주보 보기 -->

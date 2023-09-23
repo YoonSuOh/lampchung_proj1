@@ -23,7 +23,7 @@ public class MemberController {
         String referer = req.getHeader("Referer");
         LOG.info(referer);
         req.getSession().setAttribute("referer", referer);
-        return "/login";
+        return "login";
     }
 
     @PostMapping("/login")

@@ -57,7 +57,7 @@ public class PaperController {
         model.addAttribute("savenprayname", savenprayname);
         model.addAttribute("savenrespname", savenrespname);
         model.addAttribute("savenoffername", savenoffername);
-        return "/create";
+        return "create";
     }
     // 교독문 가져오기
 
@@ -106,7 +106,7 @@ public class PaperController {
 
                 Ccm ccm = new Ccm();
                 ccm.setImage(name);
-                ccm.setPath("/ccm/" + name);
+                ccm.setPath("ccm/" + name);
                 ccmDao.insertImage(ccm);
                 savedCcmFile = ccm;
                 ccmList.add(ccm);
