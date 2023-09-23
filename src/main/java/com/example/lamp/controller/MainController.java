@@ -19,7 +19,11 @@ public class MainController {
 
     @GetMapping("/lamp")
     public String Lamp(Model model){
+<<<<<<< HEAD
         return "index";
+=======
+        return "/";
+>>>>>>> d5b1b5587ae4824f76e2b690ee9a976f49a50320
     }
 
     // 주보 목록
@@ -27,7 +31,11 @@ public class MainController {
     public String Page(Model model){
         List<Paper> page = paperService.list();
         model.addAttribute("page", page);
+<<<<<<< HEAD
         return "page";
+=======
+        return "/page";
+>>>>>>> d5b1b5587ae4824f76e2b690ee9a976f49a50320
     }
 
     // 주보 보기

@@ -8,4 +8,5 @@ public interface PaperService {
     List<Paper> list();
     Paper paper(int idx);
     List<Paper> getbible(int idx); // 주보 목록 보여질 때 성경구절 가져오기
+    public int count(); // 주보 총 갯수
 }

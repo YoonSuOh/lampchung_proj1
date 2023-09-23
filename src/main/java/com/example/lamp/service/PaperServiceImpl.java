@@ -30,4 +30,10 @@ public class PaperServiceImpl implements PaperService{
     public List<Paper> getbible(int idx) {
         return dao.getbible(idx);
     }
+
+    @Override
+    public int count() {
+        return dao.count();
+    }
+
 }
