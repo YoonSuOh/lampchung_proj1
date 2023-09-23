@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <!--
 	Editorial by HTML5 UP
 	html5up.net | @ajlkn
@@ -16,7 +16,8 @@
 <body class="is-preload">
 
 <!-- Wrapper -->
-<div th:if="${#httpServletRequest.getSession(false) != null}" id="wrapper">
+<div id="wrapper">
+
     <!-- Main -->
     <div id="main">
         <div class="inner">
@@ -291,12 +292,7 @@
     </div>
 
 </div>
-<div th:unless="${#httpServletRequest.getSession(false) != null}">
-    <script>
-        alert("로그인이 필요합니다.");
-        window.history.back();
-    </script>
-</div>
+
 <!-- Scripts -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/browser.min.js"></script>
