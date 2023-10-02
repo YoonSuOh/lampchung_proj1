@@ -23,7 +23,7 @@ public class MainController {
 
     @GetMapping("/")
     public String Lamp(Model model){
-        return "/lamp";
+        return "lamp";
     }
 
     // 주보 목록
@@ -42,6 +42,6 @@ public class MainController {
         List<Paper> list = paperService.getbible(idx);
         model.addAttribute("paper", paper);
         model.addAttribute("list", list);
-        return "/paper";
+        return "paper";
     }
 }

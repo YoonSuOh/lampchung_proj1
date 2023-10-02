@@ -5,5 +5,7 @@
     <mappers>
         <mapper resource="BibleMapper.xml"/>
         <mapper resource="CcmMapper.xml"/>
+        <mapper resource="PaperMapper.xml"/>
+        <mapper resource="MemberMapper.xml"/>
     </mappers>
 </configuration>
