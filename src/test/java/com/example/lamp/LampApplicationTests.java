@@ -9,5 +9,4 @@ class LampApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
