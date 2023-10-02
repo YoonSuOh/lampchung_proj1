@@ -106,7 +106,7 @@ public class PaperController {
 
                 Ccm ccm = new Ccm();
                 ccm.setImage(name);
-                ccm.setPath("/ccm/" + name);
+                ccm.setPath("ccm/" + name);
                 ccmDao.insertImage(ccm);
                 savedCcmFile = ccm;
                 ccmList.add(ccm);

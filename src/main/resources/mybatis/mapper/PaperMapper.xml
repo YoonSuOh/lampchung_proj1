@@ -10,7 +10,13 @@
 
     <!-- 주보 목록 -->
     <select id="list">
-        SELECT * from paper
+        select
+            *
+        from paper
+            bno, title, writer, regDate, viewCnt
+        from tbl_board
+        order by bno desc
+            limit #{displayPost}, #{postNum}
     </select>
 
     <!-- 주보 보기 -->
@@ -23,5 +29,10 @@
         SELECT A.book, A.chapter, A.paragraph, A.sentence FROM bible AS A
         JOIN paper AS B
         WHERE B.idx=#{idx} AND A.long_label=B.long_label AND A.chapter=B.chapter AND A.paragraph BETWEEN B.start AND B.fin
+    </select>
+
+    <!-- 주보 총 갯수 -->
+    <select id="count" resultType="int">
+        select count(idx) from paper
     </select>
 </mapper>

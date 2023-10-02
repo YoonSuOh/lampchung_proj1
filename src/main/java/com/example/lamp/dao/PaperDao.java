@@ -13,4 +13,5 @@ public interface PaperDao {
     Paper paper(int idx); // 주보 보기
     List<Paper> getbible(int idx); // 주보 목록 보여질 때 성경구절 가져오기
     void save(); // PDF 파일로 저장
+    public int count(); // 주보 총 갯수
 }

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+  <title>남포교회 주보 시스템</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/lamp.jpg">
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Main -->
+  <div id="main">
+    <div class="inner">
+
+      <!-- Header -->
+      <header id="header">
+        <h1>로그인</h1>
+      </header>
+
+      <!-- Banner -->
+      <section id="banner">
+        <div class="content">
+          <header>
+            <h2>로그인</h2>
+
+            <div class="row">
+            <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="ID" id="ID" th:value="${savetitle}" placeholder="ID" />
+            </div>
+            </div>
+            <div class="row">
+            <h4>Password</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="Password" id="Password" th:value="${savetitle}" placeholder="Password" />
+            </div>
+            </div>
+          </header>
+          <ul class="actions">
+            <li><a th:href="@{/create}" class="button big">로그인</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div class="inner">
+
+      <!-- Search -->
+      <section id="search" class="alt">
+        <form method="post" action="#">
+          <input type="text" name="query" id="query" placeholder="Search" />
+        </form>
+      </section>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <header class="major">
+          <h2>Menu</h2>
+        </header>
+        <ul>
+          <li><a th:href="@{/}">메인</a></li>
+          <li><a th:href="@{/create}">주보 생성</a></li>
+          <li><a th:href="@{/page}">주보 목록</a></li>
+        </ul>
+      </nav>
+      <!-- Section -->
+      <section>
+        <header class="major">
+          <h2>문의</h2>
+          <ul class="contact">
+            <li class="icon solid fa-envelope"><a href="#">2001cupid@naver.com</a></li>
+            <li class="icon solid fa-phone">02-415-1323</li>
+            <li class="icon solid fa-home">05572 서울특별시 송파구 올림픽로4길 17, A-201</li>
+          </ul>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <p class="copyright">&copy; Lamp Church. All rights reserved. Front-End : Mingi-Hong, Back-End : Suoh-Yoon</p>
+      </footer>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/browser.min.js"></script>
+<script src="/js/breakpoints.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+
+</body>
+</html>
