@@ -19,7 +19,7 @@ public class MainController {
 
     @GetMapping("/lamp")
     public String Lamp(Model model){
-        return "index";
+        return "lamp";
     }
 
     // 주보 목록

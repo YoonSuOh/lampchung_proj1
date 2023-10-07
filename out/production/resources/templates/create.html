@@ -77,14 +77,12 @@
                     <h2>송영-"만복의 근원 하나님"</h2>
                     <p>만복의 근원 하나님 온 백성 찬송 드리고<br>
                         저 천사여 찬송하세 찬송 성부 성자 성령 아멘</p>
-                    <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+                    <span class="image fit"><img src="images/만복의 근원 하나님.jpg" alt="" /></span>
 
                     <hr class="Response" />
                     <div class="row">
-                        <h2>교독-</h2>
-                        <div class="">
-                            <input type="text" name="chap1" id="chap1" value="" placeholder="Number">
-                        </div>
+                        <h2>교독</h2>
+                        <textarea name="resp" placeholder="Enter your message" rows="15">[[${saveresp}]]</textarea>
                         <!--여기까지-->
                     </div>
 
@@ -101,11 +99,11 @@
                         죄를 용서받는 것과 몸의 부활과 영생을 믿습니다.<br>
                         아멘.</p>
 
-                    <!--이 부분은 데이터베이스와의 연계가 필요함.-->
                     <hr class="Song2" />
+                    <a id="Song2"></a>
                     <h2>찬양-찬양팀</h2>
                     <input type="file" name="files" multiple="multiple"/>
-                    <button type="submit" formmethod="post" onclick="javascript: form.action='/upload';">Upload</button>
+                    <button type="submit" formmethod="post" onclick="javascript: form.action='/upload'">Upload</button>
                     <ol>
                         <li th:each="item : ${ccmList}">
                             <p th:text="${item.image.substring(0, item.image.lastIndexOf('.'))}"></p>
@@ -113,7 +111,7 @@
                     </ol>
                     <ul style="list-style: none;">
                         <li th:each="item : ${ccmList}">
-                            <img th:src="@{/ccm/__${item.image}__}" th:alt="${item.image.substring(0, item.image.lastIndexOf('.'))}" />
+                            <span class="image fit"><img th:src="@{/ccm/__${item.image}__}" th:alt="${item.image.substring(0, item.image.lastIndexOf('.'))}" /></span>
                         </li>
                     </ul>
 
@@ -123,6 +121,7 @@
                     <!--여기까지-->
 
                     <hr class="Read" />
+                    <a id="Read"></a>
                     <div class="row">
                         <h2>성경 봉독 - </h2>
                         <div class="col-12-xsmall">
@@ -135,7 +134,7 @@
                             <input type="text" name="long_label">찾고싶은 성경전서
                         </div>
                         <div class="col-12-xsmall">
-                            <input type="text" name="chapter">장
+                            <input type="text" name="chapters">장
                         </div>
                         <div class="col-12-xsmall">
                             <input type="text" name="first">시작하는 절
@@ -223,7 +222,7 @@
                     <h2>송영-찬송가 5장</h2>
                     <p>이 천지간 만물들아 복 주시는 주 여호와<br>
                         전능 성부 성자 성령 찬송하고 찬송하세 아멘.</p>
-                    <span class="image fit"><img src="images/pic11.jpg" alt="" /></span>
+                    <span class="image fit"><img src="images/이 천지간 만물들아.jpg" alt="" /></span>
 
                     <hr class="Benediction">
                     <h2>축도</h2>

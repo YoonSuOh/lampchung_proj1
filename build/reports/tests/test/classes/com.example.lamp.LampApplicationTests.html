@@ -41,7 +41,11 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
+<<<<<<< HEAD
 <div class="counter">0.002s</div>
+=======
+<div class="counter">0.187s</div>
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
 <p>duration</p>
 </div>
 </td>
@@ -307,15 +311,22 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 2; The c
 </tr>
 </thead>
 <tr>
+<<<<<<< HEAD
 <td class="failures">contextLoads()</td>
 <td class="failures">0.002s</td>
 <td class="failures">failed</td>
+=======
+<td class="success">contextLoads()</td>
+<td class="success">0.187s</td>
+<td class="success">passed</td>
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
 </tr>
 </table>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
+<<<<<<< HEAD
 <pre>20:16:11.507 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 20:16:11.514 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
 20:16:11.533 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.lamp.LampApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
@@ -331,6 +342,23 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 2; The c
 20:16:11.674 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
 20:16:11.684 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4d157787, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68ed96ca, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6d1310f6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3228d990, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@54e7391d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50b8ae8d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@255990cc, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51c929ae, org.springframework.test.context.event.EventPublishingTestExecutionListener@3c8bdd5b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@29d2d081, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40e4ea87, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58783f6c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a7b503d, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@512d92b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@62c5bbdc]
 20:16:11.687 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@4d4d8fcf testClass = LampApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@610db97e testClass = LampApplicationTests, locations = '{}', classes = '{class com.example.lamp.LampApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@f667fe, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@24b6b8f6, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@45c8d09f, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@18230356, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6f8f9349, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@cd1e646], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+=======
+<pre>02:53:14.392 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+02:53:14.396 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+02:53:14.414 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.lamp.LampApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+02:53:14.419 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.lamp.LampApplicationTests], using SpringBootContextLoader
+02:53:14.420 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.lamp.LampApplicationTests]: class path resource [com/example/lamp/LampApplicationTests-context.xml] does not exist
+02:53:14.421 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.lamp.LampApplicationTests]: class path resource [com/example/lamp/LampApplicationTestsContext.groovy] does not exist
+02:53:14.421 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.lamp.LampApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+02:53:14.421 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.lamp.LampApplicationTests]: LampApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:53:14.437 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.lamp.LampApplicationTests]
+02:53:14.458 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/suohyoon/lamp_proj1/build/classes/java/main/com/example/lamp/LampApplication.class]
+02:53:14.459 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.lamp.LampApplication for test class com.example.lamp.LampApplicationTests
+02:53:14.498 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.lamp.LampApplicationTests]: using defaults.
+02:53:14.498 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+02:53:14.505 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7db0565c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@54ec8cc9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@52eacb4b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5528a42c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2a551a63, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a6f5124, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1edb61b1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ec2bf82, org.springframework.test.context.event.EventPublishingTestExecutionListener@cc62a3b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6cc0bcf6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@29539e36, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32f61a31, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@f5c79a6, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@669253b7, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5305c37d]
+02:53:14.507 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@2d35442b testClass = LampApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@27f9e982 testClass = LampApplicationTests, locations = '{}', classes = '{class com.example.lamp.LampApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@62452cc9, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@2a8d39c4, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7fc6de5b, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5dd91bca, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@207b8649, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4c2bb6e0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -340,6 +368,7 @@ Caused by: org.xml.sax.SAXParseException; lineNumber: 14; columnNumber: 2; The c
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.13)
 
+<<<<<<< HEAD
 2023-10-04 20:16:11.879  INFO 4684 --- [    Test worker] com.example.lamp.LampApplicationTests    : Starting LampApplicationTests using Java 11.0.19 on YOON with PID 4684 (started by dbstn in D:\청년1부\lamp_proj1)
 2023-10-04 20:16:11.879  INFO 4684 --- [    Test worker] com.example.lamp.LampApplicationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
 2023-10-04 20:16:12.242  INFO 4684 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
@@ -783,6 +812,16 @@ Caused by: org.xml.sax.SAXParseException: The content of elements must consist o
 	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:260) ~[mybatis-3.5.13.jar:3.5.13]
 	... 173 common frames omitted
 
+=======
+2023-10-03 02:53:14.649  INFO 61259 --- [    Test worker] com.example.lamp.LampApplicationTests    : Starting LampApplicationTests using Java 11.0.19 on yunsuoui-MacBookAir.local with PID 61259 (started by suohyoon in /Users/suohyoon/lamp_proj1)
+2023-10-03 02:53:14.649  INFO 61259 --- [    Test worker] com.example.lamp.LampApplicationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-10-03 02:53:14.918  INFO 61259 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-10-03 02:53:14.926  INFO 61259 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2023-10-03 02:53:15.428  INFO 61259 --- [    Test worker] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2023-10-03 02:53:15.556  INFO 61259 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-03 02:53:15.728  INFO 61259 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-03 02:53:15.818  INFO 61259 --- [    Test worker] com.example.lamp.LampApplicationTests    : Started LampApplicationTests in 1.297 seconds (JVM running for 1.784)
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
 </pre>
 </span>
 </div>
@@ -794,7 +833,11 @@ Caused by: org.xml.sax.SAXParseException: The content of elements must consist o
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
+<<<<<<< HEAD
 <a href="http://www.gradle.org">Gradle 8.1.1</a> at 2023. 10. 4. 오후 8:16:12</p>
+=======
+<a href="http://www.gradle.org">Gradle 8.1.1</a> at 2023. 10. 3. 오전 2:53:16</p>
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
 </div>
 </div>
 </body>

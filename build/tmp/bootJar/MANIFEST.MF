@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Main-Class: org.springframework.boot.loader.JarLauncher
 Start-Class: com.example.lamp.LampApplication
@@ -7,3 +8,14 @@ Spring-Boot-Lib: BOOT-INF/lib/
 Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
 Spring-Boot-Layers-Index: BOOT-INF/layers.idx
 
+=======
+Manifest-Version: 1.0
+Main-Class: org.springframework.boot.loader.JarLauncher
+Start-Class: com.example.lamp.LampApplication
+Spring-Boot-Version: 2.7.13
+Spring-Boot-Classes: BOOT-INF/classes/
+Spring-Boot-Lib: BOOT-INF/lib/
+Spring-Boot-Classpath-Index: BOOT-INF/classpath.idx
+Spring-Boot-Layers-Index: BOOT-INF/layers.idx
+
+>>>>>>> 7a51180ac91a04c25d582bbbcf12748ac5ef6fe7
