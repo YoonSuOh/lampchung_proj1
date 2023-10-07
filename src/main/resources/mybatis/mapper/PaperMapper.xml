@@ -5,14 +5,14 @@
 <mapper namespace="com.example.lamp.dao.PaperDao">
     <!-- 주보 생성(찬양 4개 일때) -->
     <insert id="createpaper">
-        INSERT INTO paper (title, guidename, prayname, respname, offername, ccm1, ccm2, ccm3, ccm4, resp, long_label, chapter, start, fin, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername)  VALUES (#{title}, #{guidename}, #{prayname}, #{respname}, #{offername}, #{ccm1}, #{ccm2}, #{ccm3}, #{ccm4}, #{resp}, #{long_label}, #{chapter}, #{start}, #{fin}, #{notice}, #{notice1}, #{notice2}, #{notice3}, #{speachname}, #{nprayname}, #{nrespname}, #{noffername})
+        INSERT INTO paper (title, guidename, prayname, respname, offername, ccm1, ccm2, ccm3, ccm4, resp, long_label, chapter, start, fin, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername, createdAt)  VALUES (#{title}, #{guidename}, #{prayname}, #{respname}, #{offername}, #{ccm1}, #{ccm2}, #{ccm3}, #{ccm4}, #{resp}, #{long_label}, #{chapter}, #{start}, #{fin}, #{notice}, #{notice1}, #{notice2}, #{notice3}, #{speachname}, #{nprayname}, #{nrespname}, #{noffername}, NOW())
     </insert>
 
     <!-- 주보 목록 -->
-    <select id="list">
-        select
-            *
-        from paper
+    <select id="selectList">
+        SELECT * FROM paper
+        ORDER BY createdAt DESC
+        LIMIT #{startRow}, #{pageSize}
     </select>
 
     <!-- 주보 보기 -->

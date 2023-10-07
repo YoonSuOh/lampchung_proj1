@@ -36,4 +36,5 @@ public class Paper {
     String nprayname;
     String nrespname;
     String noffername;
+    Date createdAt;
 }

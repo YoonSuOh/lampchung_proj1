@@ -5,7 +5,9 @@ import com.example.lamp.domain.Paper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @RequiredArgsConstructor
@@ -17,8 +19,14 @@ public class PaperServiceImpl implements PaperService{
     }
 
     @Override
-    public List<Paper> list() {
-        return dao.list();
+    public List<Paper> getlist(int page) {
+        int pageSize = 1;
+        int startRow = (page - 1) * pageSize;
+
+        Map<String, Object> paramMap = new HashMap<>();
+        paramMap.put("startRow", startRow);
+        paramMap.put("pageSize", pageSize);
+        return dao.selectList(paramMap);
     }
 
     @Override

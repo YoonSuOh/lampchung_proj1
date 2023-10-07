@@ -19,14 +19,20 @@ public class MainController {
 
     @GetMapping("/lamp")
     public String Lamp(Model model){
-        return "lamp";
+        return "index";
     }
 
     // 주보 목록
     @GetMapping("/page")
-    public String Page(Model model){
-        List<Paper> page = paperService.list();
+    public String Page(@RequestParam(name = "page", defaultValue = "1") int page, Model model){
+        List<Paper> paperlist = paperService.getlist(page);
+        int totalCount = paperService.count();
+
+        model.addAttribute("list", paperlist);
         model.addAttribute("page", page);
+        model.addAttribute("pageSize", 1);
+        model.addAttribute("totalPages", (totalCount + 19) / 20);
+
         return "page";
     }
 
