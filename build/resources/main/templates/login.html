@@ -32,22 +32,23 @@
         <div class="content">
           <header>
             <h2>로그인</h2>
-            <form action="/login" method="post">
-              <div class="row">
-              <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-              <div class="col-12-xsmall">
-                <input type="text" name="name" id="ID" placeholder="ID" />
-              </div>
-              </div>
-              <div class="row">
-              <h4>Password</h4>
-              <div class="col-12-xsmall">
-                <input type="password" name="password" id="Password" placeholder="Password" />
-              </div>
-              </div>
-              <input type="submit" value="로그인"/>
-            </form>
+
+            <div class="row">
+            <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="ID" id="ID" th:value="${savetitle}" placeholder="ID" />
+            </div>
+            </div>
+            <div class="row">
+            <h4>Password</h4>
+            <div class="col-12-xsmall">
+              <input type="text" name="Password" id="Password" th:value="${savetitle}" placeholder="Password" />
+            </div>
+            </div>
           </header>
+          <ul class="actions">
+            <li><a th:href="@{/create}" class="button big">로그인</a></li>
+          </ul>
         </div>
       </section>
     </div>
@@ -70,11 +71,7 @@
           <h2>Menu</h2>
         </header>
         <ul>
-<<<<<<< HEAD
           <li><a th:href="@{/lamp}">메인</a></li>
-=======
-          <li><a th:href="@{/}">메인</a></li>
->>>>>>> d5b1b5587ae4824f76e2b690ee9a976f49a50320
           <li><a th:href="@{/create}">주보 생성</a></li>
           <li><a th:href="@{/page}">주보 목록</a></li>
         </ul>
