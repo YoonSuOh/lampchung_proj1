@@ -111,7 +111,7 @@
                     </ol>
                     <ul style="list-style: none;">
                         <li th:each="item : ${ccmList}">
-                            <span class="image fit"><img th:src="@{/ccm/__${item.image}__}" th:alt="${item.image.substring(0, item.image.lastIndexOf('.'))}" /></span>
+                            <span class="image fit"><img th:src="@{static/ccm/__${item.image}__}" th:alt="${item.image.substring(0, item.image.lastIndexOf('.'))}" /></span>
                         </li>
                     </ul>
 

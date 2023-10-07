@@ -13,10 +13,6 @@
         select
             *
         from paper
-            bno, title, writer, regDate, viewCnt
-        from tbl_board
-        order by bno desc
-            limit #{displayPost}, #{postNum}
     </select>
 
     <!-- 주보 보기 -->

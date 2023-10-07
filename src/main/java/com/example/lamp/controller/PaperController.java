@@ -8,8 +8,11 @@ import com.example.lamp.domain.Paper;
 import com.example.lamp.service.BibleService;
 import com.example.lamp.service.PaperService;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,8 +22,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
-import java.io.File;
+import java.io.*;
 import java.util.*;
 
 @Controller
@@ -37,8 +39,30 @@ public class PaperController {
     private List<String> savedList;
     private String savetitle, saveguidename, saveprayname, saverespname, saveoffername, saveresp, savelonglabel, savenotice, savenotice1, savenotice2, savenotice3, savespeachname, savenprayname, savenrespname, savenoffername;
     private int chapter, start, fin;
-    private static final String UPLOAD_DIR = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "static" + File.separator + "ccm";
-    // 주보 생성 페이지로 이동
+   // 주보 생성 페이지로 이동
+    static String htmlFileReader(String pathStr){
+
+        ClassPathResource resource = new ClassPathResource(pathStr);
+        String resultcontent = "";
+        try {
+            InputStream inputStream = resource.getInputStream();
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
+
+            StringBuilder builder = new StringBuilder();
+            while (true) {
+                String line = br.readLine();
+                if(line == null ) break;
+                builder.append(line);
+            }
+
+            resultcontent = builder.toString();
+
+        } catch (IOException e) {
+
+        }
+        return resultcontent;
+    }
+    private static final String UPLOAD_DIR=htmlFileReader("static/ccm");
     @GetMapping("/create")
     public String create(Model model){
         model.addAttribute("saveresp", saveresp);
@@ -106,7 +130,7 @@ public class PaperController {
 
                 Ccm ccm = new Ccm();
                 ccm.setImage(name);
-                ccm.setPath("ccm/" + name);
+                ccm.setPath("/ccm/" + name);
                 ccmDao.insertImage(ccm);
                 savedCcmFile = ccm;
                 ccmList.add(ccm);
@@ -168,4 +192,5 @@ public class PaperController {
 
         return "redirect:/";
     }
+
 }
