@@ -1,0 +1,46 @@
+version: "3"
+volumes:
+  lampdb:
+    external: true
+    name: lampdb
+
+services:
+  database:
+    container_name: mysql_db
+    image: mysql/mysql-server:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: lamp
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ROOT_PASSWORD: akfldh@7614
+      TZ: 'Asia/Seoul'
+    ports:
+      - "3307:3306"
+    volumes:
+      - lampdb:/var/lib/mysql
+    command:
+      - "mysqld"
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+    networks:
+      - test
+
+
+  application:
+    build:
+      context: .
+      dockerfile: lamp.dockerfile
+    ports: 
+      - "5000:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql_db:3306/lamp
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: akfldh@7614
+    depends_on:
+      - database
+    restart: always
+    networks:
+    - test
+
+networks:
+  test:
