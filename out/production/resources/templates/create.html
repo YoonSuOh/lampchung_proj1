@@ -81,9 +81,18 @@
 
                     <hr class="Response" />
                     <div class="row">
-                        <h2>교독</h2>
-                        <textarea name="resp" placeholder="Enter your message" rows="15">[[${saveresp}]]</textarea>
-                        <!--여기까지-->
+                        <h2>교독 - </h2>
+                        <div class="col-12-xsmall">
+                            <input type="text" name="resp">장
+                        </div>
+                        <div class="col-12-xsmall">
+                            <button type="submit" formmethod="post" onclick="javascript: form.action='/versicle';">가져오기</button>
+                        </div>
+                        <div th:if="${versicle != null}">
+                            <div th:each="versicle : ${versicle}">
+                                <p>[[${versicle.sentence}]]</p>
+                            </div>
+                        </div>
                     </div>
 
                     <hr class="ApostleCreed" />

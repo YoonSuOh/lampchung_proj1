@@ -2,8 +2,11 @@ package com.example.lamp.controller;
 
 import com.example.lamp.dao.CcmDao;
 import com.example.lamp.domain.Paper;
+import com.example.lamp.entity.VersicleEntity;
+import com.example.lamp.repository.VersicleRepository;
 import com.example.lamp.service.PaperService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +17,12 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class MainController {
+    @Autowired
     private final PaperService paperService;
+    @Autowired
     private CcmDao dao;
+    @Autowired
+    private VersicleRepository versicleRepository;
 
     @GetMapping("/lamp")
     public String Lamp(Model model){
@@ -41,8 +48,10 @@ public class MainController {
     public String Paper(Model model, @RequestParam(required = false)Integer idx) throws Exception{
         Paper paper = paperService.paper(idx);
         List<Paper> list = paperService.getbible(idx);
+        List<Paper> versicle = paperService.getversicle(idx);
         model.addAttribute("paper", paper);
         model.addAttribute("list", list);
+        model.addAttribute("versicle", versicle);
         return "paper";
     }
 }

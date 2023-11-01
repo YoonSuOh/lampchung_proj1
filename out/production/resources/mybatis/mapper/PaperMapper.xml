@@ -27,6 +27,12 @@
         WHERE B.idx=#{idx} AND A.long_label=B.long_label AND A.chapter=B.chapter AND A.paragraph BETWEEN B.start AND B.fin
     </select>
 
+    <!-- 주보 볼때 교독문 가져오기 -->
+    <select id="getversicle" resultType="com.example.lamp.entity.VersicleEntity">
+        SELECT A.label, A.paragraph, A.sentence FROM versicle AS A
+        JOIN paper AS B
+        WHERE B.idx=#{idx} AND A.paragraph=B.resp
+    </select>
     <!-- 주보 총 갯수 -->
     <select id="count" resultType="int">
         select count(idx) from paper

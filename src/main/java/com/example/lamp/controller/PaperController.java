@@ -3,11 +3,14 @@ package com.example.lamp.controller;
 import com.example.lamp.dao.CcmDao;
 import com.example.lamp.domain.Bible;
 import com.example.lamp.domain.Ccm;
+import com.example.lamp.entity.VersicleEntity;
+import com.example.lamp.repository.VersicleRepository;
 import com.example.lamp.service.BibleService;
 import com.example.lamp.service.PaperService;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Controller;
@@ -24,17 +27,23 @@ import java.util.*;
 @Controller
 @RequiredArgsConstructor
 public class PaperController {
+    @Autowired
     private final BibleService bibleService;
+    @Autowired
     private final PaperService paperService;
+    @Autowired
     private final CcmDao ccmDao;
+    @Autowired
+    private final VersicleRepository versicleRepository;
+
     private final ResourceLoader resourceLoader;
     private final Logger log = LoggerFactory.getLogger(PaperController.class.getName());
     private Ccm savedCcmFile;
     private List<Bible> savedBibleList;
+    private List<VersicleEntity> savedVersicleList;
     private List<Ccm> ccmList = new ArrayList<>();
-    private List<String> savedList;
-    private String savetitle, saveguidename, saveprayname, saverespname, saveoffername, saveresp, savelonglabel, savenotice, savenotice1, savenotice2, savenotice3, savespeachname, savenprayname, savenrespname, savenoffername;
-    private int chapter, start, fin;
+    private String savetitle, saveguidename, saveprayname, saverespname, saveoffername, savelonglabel, savenotice, savenotice1, savenotice2, savenotice3, savespeachname, savenprayname, savenrespname, savenoffername;
+    private int saveresp, chapter, start, fin;
    // 주보 생성 페이지로 이동
     static String htmlFileReader(String pathStr){
 
@@ -61,8 +70,10 @@ public class PaperController {
     private static final String UPLOAD_DIR=htmlFileReader("static/ccm");
     @GetMapping("/create")
     public String create(Model model){
+        // System.out.println("savedVersicleList = " + savedVersicleList.get(3).getSentence());
         model.addAttribute("saveresp", saveresp);
         model.addAttribute("list", savedBibleList);
+        model.addAttribute("versicle", savedVersicleList);
         model.addAttribute("ccmList", ccmList);
         model.addAttribute("savetitle", savetitle);
         model.addAttribute("saveguidename", saveguidename);
@@ -79,13 +90,27 @@ public class PaperController {
         model.addAttribute("savenoffername", savenoffername);
         return "create";
     }
-    // 교독문 가져오기
 
-    // 성경 구절 가져오기
-    @PostMapping("/bible")
-    public String range(@RequestParam String testament, @RequestParam String long_label, @RequestParam int chapters, @RequestParam int first, @RequestParam int last, @RequestParam(value = "title", required = false, defaultValue = "null") String title, @RequestParam(value = "guidename", required = false, defaultValue="null") String guidename, @RequestParam(value = "prayname", required = false, defaultValue = "null") String prayname, @RequestParam(value="respname", required = false, defaultValue = "null") String respname, @RequestParam(value="offername", required = false, defaultValue = "null") String offername, @RequestParam(value="resp", required = false, defaultValue = "null") String resp, @RequestParam(value="Notice", required = false, defaultValue = "null") String notice , @RequestParam(value="Notice1", required = false, defaultValue = "null") String notice1, @RequestParam(value="Notice2", required = false, defaultValue = "null") String notice2, @RequestParam(value="Notice3", required = false, defaultValue = "null") String notice3, @RequestParam(value="speachname", required = false, defaultValue = "null") String speachname, @RequestParam(value="nprayname", required = false, defaultValue = "null") String nprayname, @RequestParam(value="nrespname", required = false, defaultValue = "null") String nrespname, @RequestParam(value="noffername", required = false, defaultValue = "null") String noffername, Model model) throws Exception{
-        List<Bible> list = bibleService.searchByRange(testament, long_label, chapters, first, last);
-        savedBibleList = list;
+    // 교독문 가져오기
+    @PostMapping("/versicle")
+    public String getVersicle(
+            @RequestParam(value = "title", required = false, defaultValue = "null") String title,
+            @RequestParam(value = "guidename", required = false, defaultValue="null") String guidename,
+            @RequestParam(value = "prayname", required = false, defaultValue = "null") String prayname,
+            @RequestParam(value="respname", required = false, defaultValue = "null") String respname,
+            @RequestParam(value="offername", required = false, defaultValue = "null") String offername,
+            @RequestParam(value="resp", required = false, defaultValue = "null") int resp,
+            @RequestParam(value="Notice", required = false, defaultValue = "null") String notice ,
+            @RequestParam(value="Notice1", required = false, defaultValue = "null") String notice1,
+            @RequestParam(value="Notice2", required = false, defaultValue = "null") String notice2,
+            @RequestParam(value="Notice3", required = false, defaultValue = "null") String notice3,
+            @RequestParam(value="speachname", required = false, defaultValue = "null") String speachname,
+            @RequestParam(value="nprayname", required = false, defaultValue = "null") String nprayname,
+            @RequestParam(value="nrespname", required = false, defaultValue = "null") String nrespname,
+            @RequestParam(value="noffername", required = false, defaultValue = "null") String noffername, Model model) throws Exception{
+        List<VersicleEntity> list = versicleRepository.findByParagraph(resp);
+
+        savedVersicleList = list;
         model.addAttribute("list", list);
         savetitle=title;
         saveguidename=guidename;
@@ -101,10 +126,45 @@ public class PaperController {
         savenprayname=nprayname;
         savenrespname=nrespname;
         savenoffername=noffername;
-        start=first;
-        fin=last;
-        chapter=chapters;
-        savelonglabel=long_label;
+        return "redirect:/create/#Response";
+    }
+    // 성경 구절 가져오기
+    @PostMapping("/bible")
+    public String range(
+            @RequestParam String testament,
+            @RequestParam String long_label,
+            @RequestParam int chapters,
+            @RequestParam int first,
+            @RequestParam int last,
+            @RequestParam(value = "title", required = false, defaultValue = "null") String title,
+            @RequestParam(value = "guidename", required = false, defaultValue="null") String guidename,
+            @RequestParam(value = "prayname", required = false, defaultValue = "null") String prayname,
+            @RequestParam(value="respname", required = false, defaultValue = "null") String respname,
+            @RequestParam(value="offername", required = false, defaultValue = "null") String offername,
+            @RequestParam(value="Notice", required = false, defaultValue = "null") String notice ,
+            @RequestParam(value="Notice1", required = false, defaultValue = "null") String notice1,
+            @RequestParam(value="Notice2", required = false, defaultValue = "null") String notice2,
+            @RequestParam(value="Notice3", required = false, defaultValue = "null") String notice3,
+            @RequestParam(value="speachname", required = false, defaultValue = "null") String speachname,
+            @RequestParam(value="nprayname", required = false, defaultValue = "null") String nprayname,
+            @RequestParam(value="nrespname", required = false, defaultValue = "null") String nrespname,
+            @RequestParam(value="noffername", required = false, defaultValue = "null") String noffername, Model model) throws Exception{
+        List<Bible> list = bibleService.searchByRange(testament, long_label, chapters, first, last);
+        savedBibleList = list;
+        model.addAttribute("list", list);
+        savetitle=title;
+        saveguidename=guidename;
+        saveprayname=prayname;
+        saverespname=respname;
+        saveoffername=offername;
+        savenotice=notice;
+        savenotice1=notice1;
+        savenotice2=notice2;
+        savenotice3=notice3;
+        savespeachname=speachname;
+        savenprayname=nprayname;
+        savenrespname=nrespname;
+        savenoffername=noffername;
 
         log.info("출력 6  : " + saveresp);
         log.info("출력 6  : " + chapter);
@@ -115,7 +175,21 @@ public class PaperController {
 
     // 찬양 악보 업로드 및 가져오기
     @PostMapping("/upload")
-    public String Upload(@RequestParam("files") MultipartFile[] files, @RequestParam(value = "title", required = false, defaultValue = "null") String title, @RequestParam(value = "guidename", required = false, defaultValue="null") String guidename, @RequestParam(value = "prayname", required = false, defaultValue = "null") String prayname, @RequestParam(value="respname", required = false, defaultValue = "null") String respname, @RequestParam(value="offername", required = false, defaultValue = "null") String offername, @RequestParam(value="resp", required = false, defaultValue = "null") String resp, @RequestParam(value="Notice", required = false, defaultValue = "null") String notice, @RequestParam(value="Notice1", required = false, defaultValue = "null") String notice1, @RequestParam(value="Notice2", required = false, defaultValue = "null") String notice2, @RequestParam(value="Notice3", required = false, defaultValue = "null") String notice3, @RequestParam(value="speachname", required = false, defaultValue = "null") String speachname, @RequestParam(value="nprayname", required = false, defaultValue = "null") String nprayname, @RequestParam(value="nrespname", required = false, defaultValue = "null") String nrespname, @RequestParam(value="noffername", required = false, defaultValue = "null") String noffername, Model model) {
+    public String Upload(
+            @RequestParam("files") MultipartFile[] files,
+            @RequestParam(value = "title", required = false, defaultValue = "null") String title,
+            @RequestParam(value = "guidename", required = false, defaultValue="null") String guidename,
+            @RequestParam(value = "prayname", required = false, defaultValue = "null") String prayname,
+            @RequestParam(value="respname", required = false, defaultValue = "null") String respname,
+            @RequestParam(value="offername", required = false, defaultValue = "null") String offername,
+            @RequestParam(value="Notice", required = false, defaultValue = "null") String notice,
+            @RequestParam(value="Notice1", required = false, defaultValue = "null") String notice1,
+            @RequestParam(value="Notice2", required = false, defaultValue = "null") String notice2,
+            @RequestParam(value="Notice3", required = false, defaultValue = "null") String notice3,
+            @RequestParam(value="speachname", required = false, defaultValue = "null") String speachname,
+            @RequestParam(value="nprayname", required = false, defaultValue = "null") String nprayname,
+            @RequestParam(value="nrespname", required = false, defaultValue = "null") String nrespname,
+            @RequestParam(value="noffername", required = false, defaultValue = "null") String noffername, Model model) {
         try {
             ccmList.clear();
             for (MultipartFile file : files) {
@@ -139,7 +213,6 @@ public class PaperController {
         saveprayname=prayname;
         saverespname=respname;
         saveoffername=offername;
-        saveresp=resp;
         savenotice=notice;
         savenotice1=notice1;
         savenotice2=notice2;
@@ -154,7 +227,6 @@ public class PaperController {
     // 주보 생성
     @PostMapping("/createpaper")
     public String createpaper(HttpServletRequest req, @RequestParam("title") String title, @RequestParam("guidename") String guidename, @RequestParam("prayname") String prayname, @RequestParam("respname") String respname, @RequestParam("offername") String offername, @RequestParam("long_label") String long_label, @RequestParam("Notice") String notice, @RequestParam("Notice1") String notice1, @RequestParam("Notice2") String notice2, @RequestParam("Notice3") String notice3, @RequestParam("speachname") String speachname, @RequestParam("nprayname") String nprayname, @RequestParam("nrespname") String nrespname, @RequestParam("noffername") String noffername) throws Exception{
-        saveresp = saveresp.replaceAll(" \\(", ", \\(");
         String[] ccmlist = new String[4];
 
         for(int i=0;i<ccmList.size();i++){
