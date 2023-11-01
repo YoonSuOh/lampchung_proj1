@@ -1,15 +1,11 @@
 package com.example.lamp.controller;
 
 import com.example.lamp.dao.CcmDao;
-import com.example.lamp.dao.PaperDao;
 import com.example.lamp.domain.Bible;
 import com.example.lamp.domain.Ccm;
-import com.example.lamp.domain.Paper;
 import com.example.lamp.service.BibleService;
 import com.example.lamp.service.PaperService;
 import lombok.RequiredArgsConstructor;
-import org.apache.tomcat.util.http.fileupload.FileUtils;
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;

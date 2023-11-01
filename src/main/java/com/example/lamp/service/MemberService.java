@@ -1,8 +1,25 @@
 package com.example.lamp.service;
 
+import com.example.lamp.dao.MemberDao;
 import com.example.lamp.domain.Member;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
-public interface MemberService {
-    void join(Member member); // 회원가입
-    Member login(Member member); // 로그인
+@Service
+@RequiredArgsConstructor
+public class MemberService {
+    private final MemberDao dao;
+    public Member join(Member member) {
+        return dao.join(member);
+    }
+    public Member login(Member member) {
+        return dao.login(member);
+    }
+
+    public Member findById(Long id) {
+        return dao.findById(id);
+    }
+    public Member findByName(String name){
+        return dao.findByName(name);
+    }
 }

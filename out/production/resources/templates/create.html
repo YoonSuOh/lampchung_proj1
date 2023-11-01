@@ -16,7 +16,7 @@
 <body class="is-preload">
 
 <!-- Wrapper -->
-<div id="wrapper">
+<div id="wrapper" th:if="${#httpServletRequest.getSession(false) != null}">
 
     <!-- Main -->
     <div id="main">
@@ -289,7 +289,12 @@
     </div>
 
 </div>
-
+<div th:unless="${#httpServletRequest.getSession(false) != null}">
+    <script>
+        alert("로그인이 필요합니다.");
+        window.history.back();
+    </script>
+</div>
 <!-- Scripts -->
 <script src="/js/jquery.min.js"></script>
 <script src="/js/browser.min.js"></script>

@@ -15,4 +15,10 @@
         from user
         where name=#{name} and password=#{password}
     </select>
+
+    <select id="findByName" resultType="com.example.lamp.domain.Member">
+        select *
+        from user
+        where name = #{name}
+    </select>
 </mapper>

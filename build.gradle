@@ -31,12 +31,14 @@ dependencies {
 	implementation 'javax.inject:javax.inject:1'
 	implementation('org.apache.commons:commons-lang3:3.12.0')
 	implementation 'com.google.code.gson:gson:2.9.0'
+	implementation 'mysql:mysql-connector-java:8.0.32'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:2.2.2'
 }
 
 tasks.named('test') {
