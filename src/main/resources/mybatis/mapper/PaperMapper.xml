@@ -11,7 +11,7 @@
     <!-- 주보 목록 -->
     <select id="selectList">
         SELECT * FROM paper
-        ORDER BY createdAt DESC
+        ORDER BY idx DESC
         LIMIT #{startRow}, #{pageSize}
     </select>
 

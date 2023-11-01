@@ -2411,8 +2411,11 @@ div > #getbible {
   color: #fff;
 }
 
-.board_page a:first-child {
-  border-left: 1px solid #ddd;
+.board_page a.disabled {
+  pointer-events: none;
+  color: #ccc;
+  background: #f5f5f5;
+  border-color: #ddd;
 }
 
 .board_view {

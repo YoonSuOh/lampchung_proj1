@@ -27,11 +27,11 @@ public class MainController {
     public String Page(@RequestParam(name = "page", defaultValue = "1") int page, Model model){
         List<Paper> paperlist = paperService.getlist(page);
         int totalCount = paperService.count();
-
+        int pageSize=paperService.getPageSize();
         model.addAttribute("list", paperlist);
         model.addAttribute("page", page);
         model.addAttribute("pageSize", 1);
-        model.addAttribute("totalPages", (totalCount + 19) / 20);
+        model.addAttribute("totalPages", (totalCount + pageSize-1) / pageSize);
 
         return "page";
     }
