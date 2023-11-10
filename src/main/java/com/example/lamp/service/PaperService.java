@@ -1,13 +1,14 @@
 package com.example.lamp.service;
 
+import com.example.lamp.common.FileService;
 import com.example.lamp.dao.PaperDao;
 import com.example.lamp.domain.Paper;
-import com.example.lamp.entity.VersicleEntity;
-import com.example.lamp.repository.VersicleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,6 +19,8 @@ public class PaperService{
     @Autowired
     private final PaperDao dao;
 
+    @Autowired
+    private final FileService fileService;
     int pageSize = 3;
 
     // 주보 생성
@@ -48,6 +51,22 @@ public class PaperService{
 
     // 교독문 가져오기
     public List<Paper> getversicle(int idx){return dao.getversicle(idx);}
+
+    // ccm 업로드
+    public List<String> fileupload(List<MultipartFile> files){
+        List<String> imagePaths = new ArrayList<>();
+
+        // 이미지가 있으면 업로드 후 imagePath를 받아옴
+        if (files != null && !files.isEmpty()) {
+            for (MultipartFile file : files) {
+                String imagePath = fileService.saveFile(file);
+                if (imagePath != null) {
+                    imagePaths.add(imagePath);
+                }
+            }
+        }
+        return imagePaths;
+    }
     public int count() {
         return dao.count();
     }

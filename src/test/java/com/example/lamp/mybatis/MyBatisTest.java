@@ -30,7 +30,7 @@ public class MyBatisTest {
 
         // then
         for(com.example.lamp.domain.Test test : list){
-            System.out.println(test);
+            log.info(String.valueOf(test));
         }
     }
 }

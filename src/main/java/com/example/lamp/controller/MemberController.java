@@ -39,7 +39,7 @@ public class MemberController {
             return "redirect:/login";
         } else {
             LOG.info("login success!");
-            session.setAttribute("member", login);
+            session.setAttribute("member", login);  
             session.setAttribute("name", login.getName());
             session.setAttribute("password", login.getPassword());
             LOG.info(String.valueOf((login.getName())));
