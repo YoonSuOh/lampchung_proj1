@@ -25,7 +25,6 @@ import java.util.*;
 @RequiredArgsConstructor
 @Controller
 public class PaperRestController {
-    /* 전역 변수, 생성자 */
     // Spring Bean DI
     @Autowired
     private final BibleService bibleService;
@@ -103,7 +102,6 @@ public class PaperRestController {
 
     /** 주보 생성 API
      * @param title
-     *
      * @param guidename
      * @param prayname
      * @param respname
@@ -163,32 +161,10 @@ public class PaperRestController {
         nrespname = nrespname.replaceAll(",", "");
         noffername = noffername.replaceAll(",", "");
 
-        log.info("제목: " + title);
-        log.info("인도: " +guidename);
-        log.info("기도: " +prayname);
-        log.info("교독: " +respname);
-        log.info("헌금: " +offername);
-        log.info("교독문: " + resp);
-        log.info("성경전서: " +long_label);
-        log.info("장: " + chapter);
-        log.info("시작하는 절: " + first);
-        log.info("끝나는 절: " + last);
-        log.info("전체 공지: "+notice);
-        log.info("1부: "+notice1);
-        log.info("2부: "+notice2);
-        log.info("3부: "+notice3);
-        log.info("설교: " +speachname);
-        log.info("다음주 기도: " +nprayname);
-        log.info("다음주 교독: " +nrespname);
-        log.info("다음주 헌금: " +noffername);
-        log.info("첫번째 파일: " + files);
-
         List<String> ccms = paperService.fileupload(files);
         int arrListSize = ccms.size();
 
         String ccmList[] = ccms.toArray(new String[arrListSize]);
-
-        log.info("리스트 길이 : " + arrListSize);
 
         for(int i=0;i<ccmList.length;i++){
             ccmList[i] = ccms.get(i);
@@ -203,11 +179,6 @@ public class PaperRestController {
         } else {
             ccm4 = null;
         }
-
-        log.info("첫번째 ccm : " + ccm1);
-        log.info("두번째 ccm : " + ccm2);
-        log.info("세번째 ccm : " + ccm3);
-        log.info("네번째 ccm : " + ccm4);
 
         paperService.createpaper(title, guidename, prayname, respname, offername, ccm1, ccm2, ccm3, ccm4, resp, long_label, chapter, first, last, notice, notice1, notice2, notice3, speachname, nprayname, nrespname, noffername);
 

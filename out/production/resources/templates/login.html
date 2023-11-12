@@ -30,25 +30,26 @@
       <!-- Banner -->
       <section id="banner">
         <div class="content">
-          <header>
-            <h2>로그인</h2>
-
-            <div class="row">
-            <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-            <div class="col-12-xsmall">
-              <input type="text" name="ID" id="ID" th:value="${savetitle}" placeholder="ID" />
-            </div>
-            </div>
-            <div class="row">
-            <h4>Password</h4>
-            <div class="col-12-xsmall">
-              <input type="password" name="Password" id="Password" th:value="${savetitle}" placeholder="Password" />
-            </div>
-            </div>
-          </header>
-          <ul class="actions">
-            <li><a th:href="@{/create}" class="button big">로그인</a></li>
-          </ul>
+          <form method="post" action="/login">
+            <header>
+              <h2>로그인</h2>
+              <div class="row">
+              <h4>ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+              <div class="col-12-xsmall">
+                <input type="text" name="name" id="ID" th:value="${savetitle}" placeholder="ID" />
+              </div>
+              </div>
+              <div class="row">
+              <h4>Password</h4>
+              <div class="col-12-xsmall">
+                <input type="password" name="Password" id="Password" th:value="${savetitle}" placeholder="Password" />
+              </div>
+              </div>
+            </header>
+            <ul class="actions">
+              <li><button type="submit" class="button big">로그인</button></li>
+            </ul>
+          </form>
         </div>
       </section>
     </div>
