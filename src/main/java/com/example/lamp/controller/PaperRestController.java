@@ -161,6 +161,10 @@ public class PaperRestController {
         nrespname = nrespname.replaceAll(",", "");
         noffername = noffername.replaceAll(",", "");
 
+        log.info(files.get(0).getOriginalFilename());
+        log.info(files.get(1).getOriginalFilename());
+        log.info(files.get(2).getOriginalFilename());
+
         List<String> ccms = paperService.fileupload(files);
         int arrListSize = ccms.size();
 

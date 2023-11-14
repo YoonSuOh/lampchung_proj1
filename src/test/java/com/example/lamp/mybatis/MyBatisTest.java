@@ -1,6 +1,6 @@
 package com.example.lamp.mybatis;
 
-import com.example.lamp.controller.PaperController;
+import com.example.lamp.controller.PaperRestController;
 import com.example.lamp.dao.TestDao;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,7 @@ import java.util.List;
 public class MyBatisTest {
     @Autowired
     private TestDao dao;
-    private final Logger log = LoggerFactory.getLogger(PaperController.class.getName());
+    private final Logger log = LoggerFactory.getLogger(PaperRestController.class.getName());
 
     @Test
     @DisplayName("MyBatis 연동 성공")

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.lamp.mybatis.MySQLConnectionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-14T20:36:12" hostname="YOON" time="0.005">
+  <properties/>
+  <testcase name="MySQL 연동 성공" classname="com.example.lamp.mybatis.MySQLConnectionTest" time="0.005"/>
+  <system-out><![CDATA[com.mysql.cj.jdbc.ConnectionImpl@35ef158f
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
