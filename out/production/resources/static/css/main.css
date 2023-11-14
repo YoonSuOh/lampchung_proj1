@@ -2282,10 +2282,19 @@ div > #getbible {
 .board_wrap {
   width: 1000px;
   margin: 100px auto;
+
+  @media screen and (max-width: 1680px){
+    width: 500px;
+    margin: 50px auto;
+  }
 }
+
 
 .board_title {
   margin-bottom: 30px;
+  @media screen and (max-width: 1680px){
+      margin-bottom: 15px;
+    }
 }
 
 .board_title strong {
@@ -2326,6 +2335,7 @@ div > #getbible {
   width: 100%;
   border-top: 2px solid #000;
   margin-top: 20px
+
 }
 
 .board_list > div {
@@ -2346,6 +2356,12 @@ div > #getbible {
   padding: 15px 0;
   text-align: center;
   font-size: 1.4rem;
+  @media screen and (max-width: 900px) {
+  display: inline-block;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1rem;
+  }
 }
 
 .board_list > div.top > div {
