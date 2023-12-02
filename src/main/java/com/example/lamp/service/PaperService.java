@@ -3,6 +3,7 @@ package com.example.lamp.service;
 import com.example.lamp.common.FileService;
 import com.example.lamp.dao.PaperDao;
 import com.example.lamp.domain.Paper;
+import com.example.lamp.entity.VersicleEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,6 +52,9 @@ public class PaperService{
 
     // 교독문 가져오기
     public List<Paper> getversicle(int idx){return dao.getversicle(idx);}
+
+    // 교독문 번호, 제목 가져오기
+    public VersicleEntity getversicleLabelAndParagraph(int idx){return dao.getversicleLabelAndParagraph(idx);}
 
     // ccm 업로드
     public List<String> fileupload(List<MultipartFile> files){

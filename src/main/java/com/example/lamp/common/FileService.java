@@ -12,8 +12,8 @@ import java.nio.file.Paths;
 @Component
 public class FileService {
     // 실제 업로드가 된 이미지가 저장될 경로    (서버)
-    // public static final String FILE_UPLOAD_PATH = "D:\\lamp_proj1\\src\\main\\resources\\static\\ccm/"; // 윈도우
-    public static final String FILE_UPLOAD_PATH = "/Users/suohyoon/lamp_chung1/src/main/resources/static/ccm/"; // 맥
+    public static final String FILE_UPLOAD_PATH = "D:\\lamp_proj1\\src\\main\\resources\\static\\ccm/"; // 윈도우
+    //  public static final String FILE_UPLOAD_PATH = "/Users/suohyoon/lamp_chung1/src/main/resources/static/ccm/"; // 맥
 
 
     // input: userLoginId, file(이미지) output: web imagePath

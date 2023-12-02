@@ -49,9 +49,11 @@ public class MainController {
         Paper paper = paperService.paper(idx);
         List<Paper> list = paperService.getbible(idx);
         List<Paper> versicle = paperService.getversicle(idx);
+        VersicleEntity versicleEntity = paperService.getversicleLabelAndParagraph(idx);
         model.addAttribute("paper", paper);
         model.addAttribute("list", list);
         model.addAttribute("versicle", versicle);
+        model.addAttribute("versicleEntity", versicleEntity);
         return "paper";
     }
 }

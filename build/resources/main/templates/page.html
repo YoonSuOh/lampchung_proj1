@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<head>
+    <title>남포교회 주보 목록</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/lamp.jpg">
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+        <div class="inner">
+            <!-- Header -->
+            <header id="header">
+                <a th:href="@{/page}" class="logo">
+                    <h1>주보 목록</h1>
+                </a>
+            </header>
+            <form enctype="multipart/form-data">
+                <!-- Content -->
+                <section>
+                    <div class="board_list_wrap">
+                        <div class="board_list">
+                            <div class="top">
+                                <div class="num">번호</div>
+                                <div class="title">제목</div>
+                            </div>
+                            <div th:each="list : ${list}">
+                                <div class="num">[[${list.idx}]]</div>
+                                <div class="title"><a th:href="@{/paper(idx=${list.idx})}">[[${list.title}]] 청년예배 주보</a></div>
+                            </div>
+                        </div>
+                        <div class="board_page">
+                            <!-- 이전 페이지로 이동 -->
+                            <a th:href="@{${page > 1 ? '/page?page=' + (page - 1) : '#'}}" class="bt first"><<</a>
+                            <a th:href="@{${page > 1 ? '/page?page=' + (page - 1) : '#'}}" class="bt prev"><</a>
+
+                            <!-- 페이지 번호 표시 -->
+                            <span th:each="pageNum : ${#numbers.sequence(1, totalPages)}">
+                                <a th:href="@{${'/page?page=' + pageNum}}" th:class="${pageNum == page ? 'num on' : 'num'}"
+                                   th:text="${pageNum}"></a>
+                            </span>
+
+                            <!-- 다음 페이지로 이동 -->
+                            <a th:href="@{${page < totalPages ? '/page?page=' + (page + 1) : '#'}}" class="bt next">></a>
+                            <a th:href="@{${page < totalPages ? '/page?page=' + (page + 1) : '#'}}" class="bt last">>></a>
+                        </div>
+                </section>
+            </form>
+            </header>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Search -->
+            <section id="search" class="alt">
+                <form method="post" action="#">
+                    <input type="text" name="query" id="query" placeholder="Search" />
+                </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <header class="major">
+                    <h2>Menu</h2>
+                </header>
+                <ul>
+                    <li><a th:href="@{/lamp}">메인</a></li>
+                    <li><a th:href="@{/create}">주보 생성</a></li>
+                    <li><a th:href="@{/page}">주보 목록</a></li>
+                </ul>
+            </nav>
+            <!-- Section -->
+            <section>
+                <header class="major">
+                    <h2>문의</h2>
+                    <ul class="contact">
+                        <li class="icon solid fa-envelope"><a href="#">2001cupid@naver.com</a></li>
+                        <li class="icon solid fa-phone">02-415-1323</li>
+                        <li class="icon solid fa-home">05572 서울특별시 송파구 올림픽로4길 17, A-201</li>
+                    </ul>
+                </header>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <p class="copyright">&copy; Lamp Church. All rights reserved.</p>
+            </footer>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/browser.min.js"></script>
+<script src="/js/breakpoints.min.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/main.js"></script>
+
+</main>
+</body>
+</html>

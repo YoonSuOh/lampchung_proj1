@@ -52,10 +52,15 @@
                     <span class="image fit"><img src="images/만복의 근원 하나님.jpg" alt="" /></span>
 
                     <hr class="Response" />
-                    <h2>교독-[[${paper.respname}]]</h2>
+                    <h2>교독 - [[${versicleEntity.label}]](교독문 [[${versicleEntity.paragraph}]]장) - [[${paper.respname}]]</h2>
                     <div id="getresp">
                         <div th:each="list : ${versicle}">
-                            <p th:text="${list.sentence}"></p>
+                            <th:block th:if="${#strings.startsWith(list.sentence,'(교독자)') or #strings.startsWith(list.sentence,'(다같이)') }">
+                                <b><p th:text="|${list.sentence}|"></p></b>
+                            </th:block>
+                            <th:block th:unless="${#strings.startsWith(list.sentence,'(교독자)') or #strings.startsWith(list.sentence,'(다같이)') }">
+                                <p th:text="|${list.sentence}|"></p>
+                            </th:block>
                         </div>
                     </div>
 
