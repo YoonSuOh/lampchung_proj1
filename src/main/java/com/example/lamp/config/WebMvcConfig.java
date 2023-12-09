@@ -11,7 +11,12 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry
+<<<<<<< HEAD
                 .addResourceHandler("/ccm/**")  // web image path  http://localhost/images/aaaa_현재시간/sun.png
                 .addResourceLocations("file:///" + FileService.FILE_UPLOAD_PATH); // 실제 파일 위치
+=======
+        .addResourceHandler("/ccm/**")  // web image path  http://localhost/images/aaaa_현재시간/sun.png
+        .addResourceLocations("file:///" + FileService.FILE_UPLOAD_PATH); // 실제 파일 위치
+>>>>>>> back
     }
 }

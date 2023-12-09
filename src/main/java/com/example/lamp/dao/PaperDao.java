@@ -1,6 +1,7 @@
 package com.example.lamp.dao;
 
 import com.example.lamp.domain.Paper;
+import com.example.lamp.entity.VersicleEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -35,6 +36,10 @@ public interface PaperDao {
     Paper paper(int idx); // 주보 보기
     List<Paper> getbible(int idx); // 주보 목록 보여질 때 성경구절 가져오기
     List<Paper> getversicle(int idx); // 주보 목록 보여질 때 교독문 가져오기
+
+    VersicleEntity getversicleLabelAndParagraph(int idx); // 교독문 제목, 번호 가져오기
     void save(); // PDF 파일로 저장
     public int count(); // 주보 총 갯수
+    
+    void deletePaper(int id); // 주보 삭제
 }

@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface VersicleRepository extends JpaRepository<VersicleEntity, Integer> {
-    public List<VersicleEntity> findByParagraph(int pargraph);
+    List<VersicleEntity> findByParagraph(int pargraph);
 }

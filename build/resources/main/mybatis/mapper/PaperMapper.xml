@@ -33,6 +33,16 @@
         JOIN paper AS B
         WHERE B.idx=#{idx} AND A.paragraph=B.resp
     </select>
+<<<<<<< HEAD
+=======
+    <!-- 주보 볼때 교독문 이름 가져오기 -->
+    <select id="getversicleLabelAndParagraph" resultType="com.example.lamp.entity.VersicleEntity">
+        SELECT A.label, A.paragraph FROM versicle AS A
+        JOIN paper AS B
+        WHERE B.idx=#{idx} AND A.paragraph=B.resp
+        LIMIT 1;
+    </select>
+>>>>>>> back
     <!-- 주보 총 갯수 -->
     <select id="count" resultType="int">
         select count(idx) from paper
