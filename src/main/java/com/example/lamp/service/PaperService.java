@@ -76,4 +76,9 @@ public class PaperService{
     }
     
     public int getPageSize(){return pageSize;}
+
+    // 주보 삭제
+    public void deletePaper(int id){
+        dao.deletePaper(id);
+    }
 }

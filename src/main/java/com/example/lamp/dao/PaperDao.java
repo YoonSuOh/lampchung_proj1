@@ -40,4 +40,6 @@ public interface PaperDao {
     VersicleEntity getversicleLabelAndParagraph(int idx); // 교독문 제목, 번호 가져오기
     void save(); // PDF 파일로 저장
     public int count(); // 주보 총 갯수
+    
+    void deletePaper(int id); // 주보 삭제
 }

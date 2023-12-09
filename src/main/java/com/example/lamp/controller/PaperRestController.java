@@ -19,9 +19,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.PrintWriter;
 import java.util.*;
 
-/**
- *
- */
 @RequiredArgsConstructor
 @Controller
 public class PaperRestController {
@@ -189,5 +186,18 @@ public class PaperRestController {
 
         return result;
                     
+    }
+
+    /** 주보 삭제 API
+     *
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/paper/{id}")
+    public Map<String, Object> deletePaper(@PathVariable("id") int id){
+        paperService.deletePaper(id);
+        Map<String, Object> map = new HashMap<>();
+        map.put("code", 200);
+        return map;
     }
 }

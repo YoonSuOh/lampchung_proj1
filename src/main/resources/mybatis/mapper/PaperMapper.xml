@@ -44,4 +44,8 @@
     <select id="count" resultType="int">
         select count(idx) from paper
     </select>
+    <!-- 주보 삭제 -->
+    <delete id="deletePaper">
+        delete from paper where idx = #{id};
+    </delete>
 </mapper>

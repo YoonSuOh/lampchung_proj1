@@ -22,7 +22,6 @@
 
 <!-- Wrapper -->
 <div id="wrapper" th:if="${#httpServletRequest.getSession(false) != null}">
-
     <!-- Main -->
     <div id="main">
         <div class="inner">
@@ -113,16 +112,6 @@
                     <h2>찬양-찬양팀</h2>
                     <input type="file" name="files" multiple="multiple" id="files"/>
                     <button type="button" id="uploadBtn">가져오기</button>
-<!--                    <ol>-->
-<!--                        <li th:each="item : ${ccmList}">-->
-<!--                            <p th:text="${item.image.substring(0, item.image.lastIndexOf('.'))}"></p>-->
-<!--                        </li>-->
-<!--                    </ol>-->
-<!--                    <ul style="list-style: none;">-->
-<!--                        <li th:each="item : ${ccmList}">-->
-<!--                            <span class="image fit"><img th:src="${item}" th:alt="${item.substring(0, item.image.lastIndexOf('.'))}" /></span>-->
-<!--                        </li>-->
-<!--                    </ul>-->
                     <div id="previewImages"></div>
 
                     <!--위의 기도 입력에서 가져오도록 javascript 설정 필요-->
@@ -186,39 +175,6 @@
                             <input type="text" th:name="speachname" />
                         </div>
                     </div>
-                    <!--<div class="row">
-                        <h3>주제: </h3>
-                        <div class="col-6">
-                            <input type="text" name="Topic" id="Topic" value="" placeholder="Enter the message" />
-                            <br>
-                            <br>
-                        </div>
-
-                        &lt;!&ndash;사용자가 원할 때 +버튼 눌러서 추가할 수 있도록 한다.&ndash;&gt;
-                        <div class="row">
-                            <h4>1.</h4>
-                            <div class="">
-                                <select name="book1" id="book1">
-                                    <option value="1">시편</option>
-                                    <option value="2">데살로니가전서</option>
-                                </select>
-                            </div>
-                            <div class="">
-                                <input type="text" name="chap1" id="chap1">
-                            </div>
-                            <h3>장 </h3>
-                            <div class="">
-                                <input type="text" name="verse1" id="verse1">
-                            </div>
-                            <h3>절~</h3>
-                            <div class="">
-                                <input type="text" name="verse2" id="verse2">
-                            </div>
-                            <h3>절</h3>
-                        </div>
-                    </div>-->
-                    <!--여기까지-->
-
                     <hr class="Pray2" />
                     <h2>기도</h2>
 
@@ -250,7 +206,6 @@
                         </div>
                     </div>
                 </section>
-                <button type="button" id="test">주보 테스트</button>
                 <button type="button" id="createBtn">주보 만들기</button>
             </form>
         </div>
@@ -335,8 +290,6 @@
                        for(let i=0; i<data.result.length;i++){
                            $('#RespList').append("<p>" + data.result[i].sentence + "</p>");
                         }
-                        // Append a new <p> tag with the sentence
-                        //$('#RespList').append("<p>" + item.sentence + "</p>");
                     } else {
                         alert("교독문을 찾을 수 없습니다!");
                     }
